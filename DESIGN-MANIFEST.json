@@ -1,0 +1,308 @@
+{
+  "schema": "open-design.design-manifest.v1",
+  "title": "bf40aabf-173b-4b5e-8892-a3b6026bc133",
+  "entryFile": "index.html",
+  "sourceFiles": {
+    "all": [
+      "alertas.html",
+      "assets/aquasense.css",
+      "Atat_2026-08-24_16-00-57_173.png",
+      "cadastro.html",
+      "consumo.html",
+      "design-system.html",
+      "drawing-2026-08-24T18-38-35-283Z.png",
+      "drawing-2026-08-24T19-00-16-432Z.png",
+      "drawing-2026-08-24T19-40-26-552Z.png",
+      "drawing-2026-08-24T19-41-36-509Z.png",
+      "drawing-2026-08-24T19-42-01-222Z.png",
+      "figma-handoff.html",
+      "index.html",
+      "inicio-estados.html",
+      "inicio.html",
+      "ISO_TIPO---AQUASENSE.png",
+      "login.html",
+      "ocorrencia.html",
+      "perfil.html",
+      "ponto-detalhe.html",
+      "pontos.html",
+      "residencia.html",
+      "sensores.html",
+      "splash.html",
+      "user-flow.html",
+      "VARIAC_A_O-1---AQUASENSE.png",
+      "VARIAC_A_O-2---AQUASENSE.png",
+      "VARIAC_A_O-3---AQUASENSE.png",
+      "WhatsApp-Image-2026-08-24-at-13.53.59.jpeg",
+      "WhatsApp-Image-2026-08-24-at-13.54.00.jpeg"
+    ],
+    "html": [
+      "alertas.html",
+      "cadastro.html",
+      "consumo.html",
+      "design-system.html",
+      "figma-handoff.html",
+      "index.html",
+      "inicio-estados.html",
+      "inicio.html",
+      "login.html",
+      "ocorrencia.html",
+      "perfil.html",
+      "ponto-detalhe.html",
+      "pontos.html",
+      "residencia.html",
+      "sensores.html",
+      "splash.html",
+      "user-flow.html"
+    ],
+    "css": [
+      "assets/aquasense.css"
+    ],
+    "scriptsAndComponents": [],
+    "assets": [
+      "Atat_2026-08-24_16-00-57_173.png",
+      "drawing-2026-08-24T18-38-35-283Z.png",
+      "drawing-2026-08-24T19-00-16-432Z.png",
+      "drawing-2026-08-24T19-40-26-552Z.png",
+      "drawing-2026-08-24T19-41-36-509Z.png",
+      "drawing-2026-08-24T19-42-01-222Z.png",
+      "ISO_TIPO---AQUASENSE.png",
+      "VARIAC_A_O-1---AQUASENSE.png",
+      "VARIAC_A_O-2---AQUASENSE.png",
+      "VARIAC_A_O-3---AQUASENSE.png",
+      "WhatsApp-Image-2026-08-24-at-13.53.59.jpeg",
+      "WhatsApp-Image-2026-08-24-at-13.54.00.jpeg"
+    ]
+  },
+  "screens": [
+    {
+      "file": "alertas.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "cadastro.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "consumo.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "design-system.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "figma-handoff.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "index.html",
+      "role": "launcher-overview",
+      "implementationNote": "Use this as the navigation/overview entry only; implement each linked screen file as its own route/surface."
+    },
+    {
+      "file": "inicio-estados.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "inicio.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "login.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "ocorrencia.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "perfil.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "ponto-detalhe.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "pontos.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "residencia.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "sensores.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "splash.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    },
+    {
+      "file": "user-flow.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    }
+  ],
+  "screenFilePolicy": {
+    "mode": "screen-file-first",
+    "entryFileRole": "launcher-overview",
+    "rules": [
+      "Each distinct user-facing screen or surface must be delivered and implemented as its own file/route.",
+      "If a landing page is present or requested, keep it in landing.html and do not merge it into the product app screen.",
+      "When multiple HTML screens exist, index.html is a launcher/overview only; it must not be treated as the combined final UI.",
+      "Keep product app screens, landing pages, platform screens, and OS widget surfaces separate in production code."
+    ]
+  },
+  "appModules": [
+    "Identify domain-specific in-app modules from the exported UI; do not reduce them to generic cards.",
+    "For each major module, implement purpose, default/loading/empty/error/success states, and responsive behavior.",
+    "Keep app modules separate from OS home-screen widgets in the production component model."
+  ],
+  "osWidgets": [
+    "If the export includes home-screen, lock-screen, Live Activity, tablet glance, or Android widget surfaces, implement them as platform quick-access surfaces outside the app UI.",
+    "If none are present, do not invent OS widgets unless the product requirements request them."
+  ],
+  "landingPage": {
+    "detection": "Inspect files and screen names for a marketing/landing page surface. If present, keep it separate from product app screens.",
+    "requiredSections": [
+      "hero",
+      "value props",
+      "product proof/screenshots",
+      "feature proof",
+      "CTA"
+    ]
+  },
+  "tokens": {
+    "source": [
+      "assets/aquasense.css"
+    ],
+    "required": [
+      "background",
+      "surface",
+      "foreground",
+      "muted text",
+      "border",
+      "accent",
+      "radius",
+      "shadow",
+      "spacing",
+      "type scale",
+      "motion"
+    ],
+    "note": "Extract/freeze tokens before framework implementation so coding tools do not substitute default theme colors or typography."
+  },
+  "interactions": {
+    "source": [
+      "index.html"
+    ],
+    "requiredStates": [
+      "default",
+      "hover",
+      "focus",
+      "active",
+      "disabled",
+      "loading",
+      "empty",
+      "error",
+      "success"
+    ],
+    "requiredBehaviors": [
+      "forms/validation where present",
+      "tabs/filters where present",
+      "dialogs/sheets/drawers where present",
+      "copy/generate/share actions where present",
+      "player or quick controls where present"
+    ],
+    "note": "If the prototype is static, derive missing behavior from visible controls and document it before coding."
+  },
+  "responsiveViewports": [
+    {
+      "name": "mobile-compact",
+      "width": 360,
+      "height": 800,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "mobile-standard",
+      "width": 390,
+      "height": 844,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "mobile-large",
+      "width": 430,
+      "height": 932,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "foldable-small-tablet",
+      "width": 600,
+      "height": 960,
+      "category": "foldable-tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "tablet-portrait",
+      "width": 820,
+      "height": 1180,
+      "category": "tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "tablet-landscape",
+      "width": 1024,
+      "height": 768,
+      "category": "tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "laptop",
+      "width": 1366,
+      "height": 768,
+      "category": "desktop",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "category": "desktop",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "wide",
+      "width": 1920,
+      "height": 1080,
+      "category": "wide",
+      "mustAvoidHorizontalScroll": true
+    }
+  ],
+  "implementationChecklist": [
+    "Open entryFile first and map screens, modules, tokens, and interactions.",
+    "Extract tokens before writing framework components.",
+    "Implement app-specific modules with real states instead of generic card grids.",
+    "Preserve or rebuild JS interactions for meaningful UX actions.",
+    "Validate screenshots at desktop/tablet/mobile viewports with no horizontal overflow.",
+    "Keep landing pages, in-app modules, and OS widgets as separate implementation surfaces."
+  ]
+}

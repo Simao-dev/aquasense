@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AQUASENSE — Protótipo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
+</head>
+
+<body class="launcher">
+  <div class="lx">
+    <header class="lx-head">
+      <img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="AQUASENSE">
+      <h1>Gestão inteligente da água</h1>
+      <p>Protótipo do aplicativo residencial de monitoramento por IoT. Quinze telas navegáveis, construídas sobre um
+        design system em que a cor é reservada para status — o cidadão responde “está tudo bem?” em dois segundos, sem
+        entender de tecnologia.</p>
+    </header>
+    <section class="lx-group"><span class="eyebrow">Fundamentos</span>
+      <div class="lx-grid"><a class="lx-card" href="design-system.html"><span class="n">00</span><b>Design system</b>
+          <p>Marca, cor, severidade, tipografia, componentes e regras de linguagem.</p><span class="us">Base</span>
+        </a><a class="lx-card" href="user-flow.html"><span class="n">01</span><b>Jornada e arquitetura</b>
+          <p>Três momentos de uso, cinco abas, fluxo de alerta e matriz de estados.</p><span class="us">§20</span>
+        </a></div>
+    </section>
+    <section class="lx-group"><span class="eyebrow">Acesso</span>
+      <div class="lx-grid"><a class="lx-card" href="splash.html"><span class="n">02</span><b>Splash</b>
+          <p>Identidade enquanto os dados dos sensores carregam.</p><span class="us">Tela 01</span>
+        </a><a class="lx-card" href="login.html"><span class="n">03</span><b>Login</b>
+          <p>E-mail ou CPF, senha com validação e recuperação visível.</p><span class="us">Tela 02</span>
+        </a><a class="lx-card" href="cadastro.html"><span class="n">04</span><b>Cadastro</b>
+          <p>Duas etapas: dados pessoais e endereço da residência.</p><span class="us">Tela 03</span>
+        </a></div>
+    </section>
+    <section class="lx-group"><span class="eyebrow">Aplicativo</span>
+      <div class="lx-grid"><a class="lx-card" href="inicio.html"><span class="n">05</span><b>Início</b>
+          <p>Hero de status, resumo dos sensores, pontos e último evento.</p><span class="us">US01 · US02 · US10</span>
+        </a><a class="lx-card" href="inicio-estados.html"><span class="n">06</span><b>Início — 7 estados</b>
+          <p>Normal, leve, moderado, crítico, sensor offline, sem conexão e carregando.</p><span class="us">§16</span>
+        </a><a class="lx-card" href="consumo.html"><span class="n">07</span><b>Consumo</b>
+          <p>Hoje, 7 e 30 dias com gráfico, indicadores e ocorrências.</p><span class="us">US06 · US12</span>
+        </a><a class="lx-card" href="alertas.html"><span class="n">08</span><b>Alertas</b>
+          <p>Filtro por categoria, agrupamento por data e marcação de leitura.</p><span class="us">US05 · US07</span>
+        </a><a class="lx-card" href="sensores.html"><span class="n">09</span><b>Sensores</b>
+          <p>Resumo por estado, lista completa e diagnóstico.</p><span class="us">US08 · US09</span>
+        </a><a class="lx-card" href="perfil.html"><span class="n">10</span><b>Perfil</b>
+          <p>Conta, notificações, preferências, segurança e ajuda.</p><span class="us">Tela 15</span>
+        </a></div>
+    </section>
+    <section class="lx-group"><span class="eyebrow">Detalhe e diagnóstico</span>
+      <div class="lx-grid"><a class="lx-card" href="ocorrencia.html"><span class="n">11</span><b>Detalhe da
+            ocorrência</b>
+          <p>Faixa de referência, dados completos, orientação e verificação.</p><span class="us">US03 · US11</span>
+        </a><a class="lx-card" href="pontos.html"><span class="n">12</span><b>Pontos de consumo</b>
+          <p>Seis pontos monitorados com filtro por estado.</p><span class="us">US04</span>
+        </a><a class="lx-card" href="ponto-detalhe.html"><span class="n">13</span><b>Detalhe do ponto</b>
+          <p>Fluxo atual, consumo por período e eventos do ponto.</p><span class="us">US02 · US08</span>
+        </a><a class="lx-card" href="residencia.html"><span class="n">14</span><b>Minha residência</b>
+          <p>Entrada → caixa → distribuição → pontos, com seleção interativa.</p><span class="us">US04</span>
+        </a></div>
+    </section>
+    <section class="lx-group"><span class="eyebrow">Assinatura e suporte</span>
+      <div class="lx-grid"><a class="lx-card" href="planos.html"><span class="n">15</span><b>Planos</b>
+          <p>Mensal, semestral e anual, com resumo do que cada assinatura libera no app.</p><span class="us">Tela
+            16</span>
+        </a><a class="lx-card" href="chat.html"><span class="n">16</span><b>Chat de suporte</b>
+          <p>Conversa com respostas automáticas e perguntas rápidas sobre planos, sensores e alertas.</p><span
+            class="us">Tela 17</span>
+        </a></div>
+    </section>
+  </div>
+</body>
+
+</html>

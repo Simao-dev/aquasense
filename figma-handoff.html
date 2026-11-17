@@ -1,0 +1,155 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AQUASENSE � Importar no Figma e montar os fluxos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/aquasense.css">
+</head><body>
+<div class="wrap">
+
+<header class="head" data-od-id="cabecalho">
+  <img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="AQUASENSE">
+  <h1>Importar no Figma e montar os fluxos</h1>
+  <p class="lede">As 13 telas do aplicativo, os 2 overlays e as 61 ligações clicáveis, extraídas do código — não da memória. Siga na ordem: escolher a rota, preparar os arquivos, importar, nomear, ligar.</p>
+</header>
+
+<section data-od-id="rotas">
+  <span class="eyebrow">01 — Rota de importação</span>
+  <h2>Três caminhos, um recomendado</h2>
+  <p>Figma não abre HTML nativamente. Toda rota é uma conversão, e cada uma troca fidelidade por trabalho manual.</p>
+  <div class="routes">
+    <div class="route pick">
+      <span class="tag">Recomendado</span>
+      <h3>html.to.design</h3>
+      <p>Plugin gratuito no Figma Community. Cole o HTML e ele monta camadas editáveis.</p>
+      <ul>
+        <li class="y">Nossos arquivos são autocontidos — o CSS está embutido, então o modo “paste code” funciona sem servidor</li>
+        <li class="y">Texto continua texto, cores viram estilos</li>
+        <li class="n">Auto-layout sai aproximado; espere arrumar espaçamento</li>
+        <li class="n">Não traz os PNGs do logo — ver seção 2</li>
+      </ul>
+    </div>
+    <div class="route">
+      <span class="tag">Maior fidelidade</span>
+      <h3>PNG + reconstrução</h3>
+      <p>Exportar cada tela como imagem, colar no Figma como referência e remontar com componentes nativos.</p>
+      <ul>
+        <li class="y">Arquivo final limpo, com auto-layout e variantes de verdade</li>
+        <li class="y">Único caminho que gera uma biblioteca reutilizável</li>
+        <li class="n">É redesenhar 13 telas à mão</li>
+      </ul>
+    </div>
+    <div class="route">
+      <span class="tag">Automatizado</span>
+      <h3>OpenDesign → Figma</h3>
+      <p>A habilidade <code>figma-generate-design</code> escreve frames direto pela Figma Plugin API.</p>
+      <ul>
+        <li class="y">Gera frames nativos, sem intermediário</li>
+        <li class="n">Exige o Figma desktop com a ponte de plugin conectada</li>
+        <li class="n">Exige um design system anexado ao projeto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section data-od-id="preparar">
+  <span class="eyebrow">02 — Preparar</span>
+  <h2>Um detalhe que quebra o import</h2>
+  <div class="warn">
+    <b>Os quatro PNGs da marca são referências relativas</b>
+    <p>No modo “colar código”, o plugin não resolve <code>img/VARIAC_A_O-3---AQUASENSE.png</code> e a marca some do topo das telas. Duas saídas: converter os PNGs para <code>data:image/png;base64</code> dentro do HTML antes de colar, ou importar sem eles e reinserir o logo como imagem no Figma — são 3 telas afetadas (splash, login, cadastro) mais a barra superior do Início.</p>
+  </div>
+  <div class="note">
+    <b>Quais arquivos entram no protótipo</b>
+    <p>Entram as 13 telas do app: <code>splash</code>, <code>login</code>, <code>cadastro</code>, <code>inicio</code>, <code>consumo</code>, <code>alertas</code>, <code>sensores</code>, <code>perfil</code>, <code>pontos</code>, <code>ponto-detalhe</code>, <code>ocorrencia</code>, <code>residencia</code>.</p>
+    <p>Ficam de fora <code>index</code>, <code>user-flow</code>, <code>design-system</code> e <code>inicio-estados</code> — são documentação, não telas navegáveis. Importe <code>inicio-estados</code> em página separada se quiser os sete estados como referência de especificação.</p>
+  </div>
+</section>
+
+<section data-od-id="importar">
+  <span class="eyebrow">03 — Importar e organizar</span>
+  <h2>Passo a passo</h2>
+  <ol class="steps">
+    <li><b>Instale o plugin</b><p>No Figma: <b>Resources → Plugins</b>, busque <b>html.to.design</b>, instale.</p></li>
+    <li><b>Crie a estrutura de páginas</b><p>Três páginas: <b>01 · Protótipo</b> (as telas ligadas), <b>02 · Estados</b> (os sete estados do Início), <b>03 · Referência</b> (design system e jornada).</p></li>
+    <li><b>Importe uma tela por vez</b><p>Abra o plugin, aba <b>Code</b>, cole o conteúdo do arquivo, defina a largura como <b>390</b> e importe. Repita para as 13 telas — leva cerca de 20 minutos no total.</p></li>
+    <li><b>Padronize os frames</b><p>Cada tela precisa virar um frame de <b>390 × 844</b>, com <b>Clip content</b> ligado. Renomeie exatamente com o nome do arquivo, sem a extensão: <code>splash</code>, <code>login</code>, <code>inicio</code>… A tabela da seção 4 usa esses nomes.</p></li>
+    <li><b>Duplique os frames de estado</b><p>Quatro telas precisam de cópias: <code>cadastro-1</code> e <code>cadastro-2</code>; <code>consumo-hoje</code>, <code>consumo-7d</code>, <code>consumo-30d</code>; os três períodos de <code>ponto-detalhe</code>; e <code>ocorrencia-resolvida</code>.</p></li>
+    <li><b>Recorte os dois overlays</b><p>Crie <code>dlg-sair</code> e <code>dlg-verificar</code> como frames soltos de 320&nbsp;px de largura, contendo apenas a caixa do diálogo.</p></li>
+    <li><b>Marque o ponto de partida</b><p>Selecione <code>splash</code> e clique em <b>Flow starting point</b> no painel Prototype. Nomeie o fluxo como “Primeiro acesso”.</p></li>
+  </ol>
+</section>
+
+<section data-od-id="mapa">
+  <span class="eyebrow">04 — Mapa de ligações</span>
+  <h2>Todas as conexões, tela por tela</h2>
+  <p>Extraído dos arquivos HTML. Para cada linha: selecione o elemento no Figma, arraste a bolinha do painel Prototype até o frame de destino e aplique a transição indicada.</p>
+  <div class="legend-flex">
+    <span class="tr push">Move in ← — avançar</span>
+    <span class="tr back">Move out → — voltar</span>
+    <span class="tr inst">Instant — troca de aba ou estado</span>
+    <span class="tr over">Open overlay — diálogo</span>
+    <span class="tr diss">Dissolve — troca de contexto</span>
+  </div>
+  <div class="scr"><span>01</span>splash.html</div><div class="warn"><b>Lacuna: o splash não leva a lugar nenhum</b><p>No HTML ele não tem link — o carregamento é só visual. No Figma, ligue o frame inteiro com <b>After delay</b> de 1800&nbsp;ms para <code>login</code>, senão o protótipo trava na primeira tela.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">(nenhum elemento clicável)</td><td class="to"><code>login.html</code></td><td><span class="tr diss">After delay 1800ms</span></td></tr></tbody></table><div class="scr"><span>02</span>login.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Entrar <em>(botão primário)</em></td><td class="to"><code>inicio.html</code></td><td><span class="tr diss">Dissolve 200ms</span></td></tr><tr><td class="el">Criar conta</td><td class="to"><code>cadastro.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Esqueci minha senha</td><td class="to"><code>—</code></td><td><span class="tr back">sem destino no protótipo</span></td></tr></tbody></table><div class="scr"><span>03</span>cadastro.html — etapa 1</div><div class="note"><b>Duas etapas viram dois frames</b><p>No HTML a troca de etapa acontece no mesmo arquivo por JS. No Figma, duplique o frame: <code>cadastro-1</code> (dados pessoais) e <code>cadastro-2</code> (residência), com a barra de progresso avançada no segundo.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code>login.html</code></td><td><span class="tr back">Move out → 250ms</span></td></tr><tr><td class="el">Continuar</td><td class="to"><code>cadastro-2</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr></tbody></table><div class="scr"><span>04</span>cadastro.html — etapa 2</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code>cadastro-1</code></td><td><span class="tr back">Move out → 250ms</span></td></tr><tr><td class="el">Criar conta <em>(botão primário)</em></td><td class="to"><code>inicio.html</code></td><td><span class="tr diss">Dissolve 200ms</span></td></tr></tbody></table><div class="scr"><span>05</span>inicio.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Ícone de sino <em>(topo)</em></td><td class="to"><code>alertas.html</code></td><td><span class="tr inst">Instant</span></td></tr><tr><td class="el">Ícone de perfil <em>(topo)</em></td><td class="to"><code>perfil.html</code></td><td><span class="tr inst">Instant</span></td></tr><tr><td class="el">Aviso “1 sensor sem dados”</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Card resumo dos sensores</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Ver todos” — sensores</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Abrir mapa” — residência</td><td class="to"><code>residencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Faixa Entrada → Caixa → Distribuição → Pontos</td><td class="to"><code>residencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Ver todos” — pontos</td><td class="to"><code>pontos.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Linha Chuveiro</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Linha Torneira da cozinha</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Linha Torneira externa</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Linha Caixa d’água</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Histórico” — último evento</td><td class="to"><code>alertas.html</code></td><td><span class="tr inst">Instant</span></td></tr><tr><td class="el">Linha do último evento</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Barra de abas <em>(5 destinos)</em></td><td class="to"><code>ver seção 5</code></td><td><span class="tr inst">Instant</span></td></tr></tbody></table><div class="scr"><span>06</span>consumo.html</div><div class="note"><b>O filtro Hoje / 7 dias / 30 dias</b><p>São três estados do mesmo frame. Faça <code>consumo-hoje</code>, <code>consumo-7d</code> e <code>consumo-30d</code> e ligue os três botões entre si com <b>Smart animate 300&nbsp;ms</b> — as barras do gráfico interpolam sozinhas.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Ícone de sino <em>(topo)</em></td><td class="to"><code>alertas.html</code></td><td><span class="tr inst">Instant</span></td></tr><tr><td class="el">“Ver todas” — ocorrências</td><td class="to"><code>alertas.html</code></td><td><span class="tr inst">Instant</span></td></tr><tr><td class="el">Linha “Possível vazamento moderado”</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Linha “Possível vazamento leve”</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Barra de abas</td><td class="to"><code>ver seção 5</code></td><td><span class="tr inst">Instant</span></td></tr></tbody></table><div class="scr"><span>07</span>alertas.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Alerta “Possível vazamento moderado” — hoje</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Sensor indisponível” — hoje</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Fluxo fora do padrão” — hoje</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Manutenção necessária” — ontem</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Retorno ao fluxo normal” — ontem</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Possível vazamento leve” — anterior</td><td class="to"><code>ocorrencia.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Alerta “Sensor indisponível” — anterior</td><td class="to"><code>sensores.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Barra de abas</td><td class="to"><code>ver seção 5</code></td><td><span class="tr inst">Instant</span></td></tr></tbody></table><div class="scr"><span>08</span>sensores.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Sensor 01 · Entrada de água</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Sensor 02 · Caixa d’água</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Sensor 03 · Banheiro</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Sensor 04 · Cozinha</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Sensor 05 · Descarga</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Sensor 06 · Área externa</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Barra de abas</td><td class="to"><code>ver seção 5</code></td><td><span class="tr inst">Instant</span></td></tr></tbody></table><div class="scr"><span>09</span>perfil.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">“Sair da conta”</td><td class="to"><code>overlay <b>dlg-sair</b></code></td><td><span class="tr over">Open overlay · centralizado</span></td></tr><tr><td class="el">Barra de abas</td><td class="to"><code>ver seção 5</code></td><td><span class="tr inst">Instant</span></td></tr></tbody></table><div class="scr"><span>10</span>overlay · dlg-sair</div><div class="note"><b>Overlay, não frame novo</b><p>Crie um frame de 320&nbsp;px só com a caixa do diálogo. Em <b>Open overlay</b> use posição <b>Centered</b>, fundo <code>#0A2030</code> a 50% e marque “Close when clicking outside”. Diálogo modal nunca vai como painel lateral.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Cancelar <em>(esquerda)</em></td><td class="to"><code>fecha o overlay</code></td><td><span class="tr back">Close overlay</span></td></tr><tr><td class="el">Sair <em>(direita, destrutivo)</em></td><td class="to"><code>login.html</code></td><td><span class="tr diss">Dissolve 200ms</span></td></tr></tbody></table><div class="scr"><span>11</span>pontos.html</div><div class="note"><b>Os chips Todos / Requer atenção / Normal</b><p>Três estados do frame. Ligue com <b>Smart animate</b> para as linhas filtradas entrarem e saírem suavemente.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code>inicio.html</code></td><td><span class="tr back">Move out → 250ms</span></td></tr><tr><td class="el">Entrada de água</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Caixa d’água</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Chuveiro</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Torneira da cozinha</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Descarga</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">Torneira externa</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr></tbody></table><div class="scr"><span>12</span>ponto-detalhe.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code><b>Back</b> — não fixe destino</code></td><td><span class="tr back">Navigate back</span></td></tr><tr><td class="el">Filtro Hoje / 7 dias / 30 dias</td><td class="to"><code>3 estados do frame</code></td><td><span class="tr inst">Smart animate 300ms</span></td></tr></tbody></table><div class="scr"><span>13</span>ocorrencia.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code><b>Back</b> — não fixe destino</code></td><td><span class="tr back">Navigate back</span></td></tr><tr><td class="el">“Abrir ponto” — histórico</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Verificar ocorrência” <em>(primário)</em></td><td class="to"><code>overlay <b>dlg-verificar</b></code></td><td><span class="tr over">Open overlay · centralizado</span></td></tr><tr><td class="el">“Ignorar esta ocorrência”</td><td class="to"><code>alertas.html</code></td><td><span class="tr back">Move out → 250ms</span></td></tr></tbody></table><div class="scr"><span>14</span>overlay · dlg-verificar</div><div class="note"><b>Precisa de um frame a mais</b><p>Confirmar não só fecha: o cabeçalho da ocorrência vira verde e o botão fica desabilitado como “Ocorrência verificada”. Duplique <code>ocorrencia</code> como <code>ocorrencia-resolvida</code> com esse estado e aponte para lá.</p></div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Cancelar <em>(esquerda)</em></td><td class="to"><code>fecha o overlay</code></td><td><span class="tr back">Close overlay</span></td></tr><tr><td class="el">Confirmar <em>(direita)</em></td><td class="to"><code>ocorrencia-resolvida</code></td><td><span class="tr diss">Dissolve 200ms</span></td></tr></tbody></table><div class="scr"><span>15</span>residencia.html</div><table><thead><tr><th>Elemento clicável</th><th>Destino</th><th>Transição</th></tr></thead><tbody><tr><td class="el">Voltar</td><td class="to"><code>inicio.html</code></td><td><span class="tr back">Move out → 250ms</span></td></tr><tr><td class="el">Nó do mapa <em>(7 nós)</em></td><td class="to"><code>estado selecionado do frame</code></td><td><span class="tr inst">Smart animate 200ms</span></td></tr><tr><td class="el">“Abrir detalhes do ponto”</td><td class="to"><code>ponto-detalhe.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr><tr><td class="el">“Ver lista”</td><td class="to"><code>pontos.html</code></td><td><span class="tr push">Move in ← 250ms</span></td></tr></tbody></table>
+</section>
+
+<section data-od-id="tabbar">
+  <span class="eyebrow">05 — Barra de abas</span>
+  <h2>Ligue uma vez, não cinco vezes</h2>
+  <p>A barra inferior aparece em cinco telas. Ligar 5 abas × 5 telas seriam 25 conexões manuais e 25 chances de errar.</p>
+  <ol class="steps">
+    <li><b>Transforme a barra em componente</b><p>Selecione a barra de uma tela e crie o componente <code>nav/tabbar</code>. Faça uma variante por aba ativa: <code>ativo=inicio</code>, <code>ativo=consumo</code>, <code>ativo=alertas</code>, <code>ativo=sensores</code>, <code>ativo=perfil</code>.</p></li>
+    <li><b>Ligue no componente principal</b><p>Dentro do componente, ligue cada ícone ao frame correspondente com <b>Navigate to · Instant</b>. As instâncias herdam as conexões — cinco ligações resolvem as cinco telas.</p></li>
+    <li><b>Troque as barras das telas por instâncias</b><p>Em cada tela, substitua a barra importada por uma instância com a variante certa.</p></li>
+  </ol>
+  <div class="note">
+    <b>Instant, sempre</b>
+    <p>Troca de aba não é navegação hierárquica: nada “entra” nem “sai”. Qualquer transição animada aqui faz a barra parecer um empilhamento de telas, que é justamente o modelo mental errado.</p>
+  </div>
+</section>
+
+<section data-od-id="lacunas">
+  <span class="eyebrow">06 — Resolver ao ligar</span>
+  <h2>Três coisas que o HTML não resolve e o Figma resolve melhor</h2>
+  <div class="warn">
+    <b>1 · Voltar com destino fixo</b>
+    <p><code>ponto-detalhe</code> é alcançável a partir de cinco telas — Início, Pontos, Sensores, Alertas e Residência — mas no HTML o botão Voltar aponta sempre para <code>pontos</code>. <code>ocorrencia</code> tem o mesmo problema: volta sempre para <code>inicio</code>, mesmo quando você chegou por Alertas. No Figma use <b>Navigate back</b> em vez de destino fixo, e o retorno passa a respeitar de onde a pessoa veio.</p>
+  </div>
+  <div class="warn">
+    <b>2 · Splash sem saída</b>
+    <p>Não tem link nenhum. Sem um <b>After delay</b> no frame, o protótipo morre na abertura.</p>
+  </div>
+  <div class="warn">
+    <b>3 · Os sete estados do Início não estão ligados</b>
+    <p>São especificação, não navegação — não existe botão no app que troque a severidade. Deixe em página separada. Se quiser demonstrar a mudança de estado numa apresentação, ligue-os em sequência com <b>Smart animate</b> num fluxo próprio chamado “Severidade”, sem misturar com o fluxo principal.</p>
+  </div>
+</section>
+
+<section data-od-id="checklist">
+  <span class="eyebrow">07 — Conferência</span>
+  <h2>Antes de compartilhar o link</h2>
+  <div class="card">
+    <ul class="chk">
+      <li>Splash avança sozinho para o Login</li>
+      <li>Login → Início e Login → Cadastro → Início funcionam</li>
+      <li>As cinco abas trocam de tela em qualquer uma das cinco telas</li>
+      <li>Toda linha de lista abre o detalhe correspondente</li>
+      <li>Todo botão Voltar retorna para a tela de origem, não para um destino fixo</li>
+      <li>Os dois diálogos abrem centralizados e fecham ao clicar fora</li>
+      <li>Cancelar aparece à esquerda de Sair e de Confirmar nos dois diálogos</li>
+      <li>Confirmar em “Verificar ocorrência” leva ao estado resolvido, não só fecha</li>
+      <li>Sair leva ao Login</li>
+      <li>Nenhuma tela do protótipo tem conexão apontando para um frame de documentação</li>
+      <li>O logo aparece no Splash, Login, Cadastro e na barra superior do Início</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

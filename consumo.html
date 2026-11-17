@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AQUASENSE — Consumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
+</head>
+
+<body>
+  <div class="app " data-od-id="app">
+    <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+          fill="currentColor" aria-hidden="true">
+          <rect x="0" y="7" width="3" height="4" rx="1" />
+          <rect x="4.5" y="5" width="3" height="6" rx="1" />
+          <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+          <rect x="13.5" y="0" width="3" height="11" rx="1" />
+        </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M1 4a9 9 0 0 1 13 0" />
+          <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+          <path d="M7.5 9.4h.01" />
+        </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+          <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+          <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+          <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+        </svg></span></div>
+    <header class="appbar" data-od-id="appbar">
+      <h1>Consumo</h1><a class="iconbtn" href="alertas.html" aria-label="Alertas"><svg width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+          <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+        </svg></a>
+    </header>
+    <div class="scroll" data-od-id="consumo">
+      <div class="seg" role="group" aria-label="Período" data-od-id="filtro-periodo">
+        <button data-p="d" aria-pressed="false">Hoje</button>
+        <button data-p="w" aria-pressed="true">7 dias</button>
+        <button data-p="m" aria-pressed="false">30 dias</button>
+      </div>
+
+      <section class="card" style="margin-top:14px" data-od-id="grafico-consumo">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
+          <div><span class="eyebrow" id="c-label">Últimos 7 dias</span>
+            <div class="big" id="c-total" style="margin-top:4px">1.024<span class="u">L</span></div>
+          </div>
+          <span class="badge ok" id="c-cmp"><span class="dot"></span>8% abaixo</span>
+        </div>
+        <div class="bars" id="c-chart" role="img" aria-label="Gráfico de consumo do período">
+          <div class="b " style="height:55%"><i style="height:100%"></i></div>
+          <div class="b " style="height:66%"><i style="height:100%"></i></div>
+          <div class="b " style="height:61%"><i style="height:100%"></i></div>
+          <div class="b mid" style="height:100%"><i style="height:100%"></i></div>
+          <div class="b " style="height:59%"><i style="height:100%"></i></div>
+          <div class="b low" style="height:74%"><i style="height:100%"></i></div>
+          <div class="b " style="height:63%"><i style="height:100%"></i></div>
+        </div>
+        <div class="chart-x" id="c-chart-x">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:6px">
+          <span style="width:9px;height:9px;border-radius:2px;background:var(--mid);display:inline-block"></span>
+          dias com anormalidade identificada
+        </p>
+      </section>
+
+      <div class="sec-head">
+        <h2>No período</h2>
+      </div>
+      <div class="grid2">
+        <div class="stat"><span>Consumo total</span><b id="k1">1.024<i>L</i></b></div>
+        <div class="stat"><span>Maior consumo</span><b id="k2">214<i>L · Qua</i></b></div>
+        <div class="stat"><span>Possíveis vazamentos</span><b id="k3" style="color:var(--mid-ink)">2</b></div>
+        <div class="stat"><span>Potencialmente desperdiçado</span><b id="k4" style="color:var(--mid-ink)">31<i>L</i></b>
+        </div>
+      </div>
+      <p style="font-size:11.5px;color:var(--muted);margin:10px 2px 0;line-height:1.45">
+        “Potencialmente desperdiçado” é uma estimativa a partir do fluxo fora do padrão — não é uma medição direta de
+        perda.</p>
+
+      <div class="sec-head">
+        <h2>Ocorrências no período</h2><a href="alertas.html">Ver todas</a>
+      </div>
+      <div class="list" data-od-id="ocorrencias-periodo">
+        <a class="row" href="ocorrencia.html"><span class="ic mid"><svg width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+              <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+            </svg></span><span class="txt"><b>Possível vazamento moderado</b><span>Banheiro · 24/08 13:24 · 28
+              min</span></span><span class="end"><span class="badge mid"><span class="dot"></span>Em aberto</span><svg
+              width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" />
+            </svg></span></a> <a class="row" href="ocorrencia.html"><span class="ic low"><svg width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+              <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+            </svg></span><span class="txt"><b>Possível vazamento leve</b><span>Cozinha · 22/08 07:10 · 12
+              min</span></span><span class="end"><span class="badge ok">Resolvido</span><svg width="17" height="17"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" />
+            </svg></span></a>
+      </div>
+    </div>
+    <a class="chat-fab" href="chat.html" data-od-id="chat-fab" aria-label="Abrir chat de suporte"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+    <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+        data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5" />
+          <path d="M5 9.5V21h14V9.5" />
+        </svg><span>Início</span></a><a href="consumo.html" aria-current="page" data-od-id="tab-chart"><svg width="21"
+          height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 20h18" />
+          <path d="M6.5 20v-6" />
+          <path d="M11.5 20V7" />
+          <path d="M16.5 20v-4" />
+          <path d="M21 20V11" />
+        </svg><span>Consumo</span></a>
+        <!-- <a href="alertas.html" data-od-id="tab-bell"><svg width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+          <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+        </svg><span>Alertas</span></a> -->
+        <a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="2" />
+          <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+          <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+          <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+          <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+        </svg><span>Sensores</span></a><a href="planos.html" data-od-id="tab-plans"><svg width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="5" width="20" height="14" rx="2.5" />
+          <path d="M2 10h20" />
+        </svg><span>Planos</span></a>
+        <!--<a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21a8 8 0 0 1 16 0" />
+        </svg><span>Perfil</span></a>--></nav>
+  </div>
+</body>
+
+</html>

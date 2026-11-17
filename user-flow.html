@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AQUASENSE � Jornada e arquitetura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/aquasense.css">
+</head><body class="doc">
+<div class="doc-wrap">
+<header class="doc-head" data-od-id="uf-head">
+  <img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="AQUASENSE">
+  <h1>Jornada e arquitetura de informação</h1>
+  <p>Mapa que antecede o desenho das telas. Define como o cidadão navega, em que ordem a informação aparece e o que cada tela precisa provar. Toda decisão de layout depois responde a este documento.</p>
+</header>
+
+<section class="doc-sec" data-od-id="uf-jornada">
+  <span class="eyebrow">01 — Jornada</span>
+  <h2>Três momentos, três objetivos diferentes</h2>
+  <p class="lede">O erro clássico em app de IoT é desenhar só o momento de instalação. O uso real é o segundo: uma verificação de oito segundos, várias vezes por semana, quase sempre sem nada de errado acontecendo.</p>
+  <div class="track">
+    <div class="phase"><span class="eyebrow">Momento 1</span><h3>Primeiro acesso</h3><p class="goal">Entrar, entender de onde vem a água e confiar nos sensores.</p><ol class="stepl"><li><b>Splash</b><em>Identidade e carregamento dos dados dos sensores.</em></li><li><b>Login ou criar conta</b><em>E-mail/CPF e senha. Recuperação sempre visível.</em></li><li><b>Cadastro em duas etapas</b><em>Dados pessoais, depois endereço da residência.</em></li><li><b>Primeira leitura do Início</b><em>Status verde, mesmo sem histórico.</em></li><li><b>Minha residência</b><em>Entrada → caixa → distribuição → pontos.</em></li></ol></div> <div class="phase"><span class="eyebrow">Momento 2</span><h3>Uso diário</h3><p class="goal">Responder “está tudo bem?” sem rolar a tela.</p><ol class="stepl"><li><b>Abre o app</b><em>Hero de status ocupa o topo, sem carrossel nem banner antes.</em></li><li><b>Lê o status em 2 s</b><em>Cor, rótulo e frase curta. Nada mais é necessário se estiver verde.</em></li><li><b>Confere fluxo e consumo</b><em>Três números na base do hero: agora, hoje, mês.</em></li><li><b>Verifica a última atualização</b><em>Carimbo de horário sempre visível — requisito US10.</em></li><li><b>Sai do app</b><em>Sessão típica encerra aqui. Sem tarefa pendente.</em></li></ol></div> <div class="phase"><span class="eyebrow">Momento 3</span><h3>Ocorrência</h3><p class="goal">Saber o tamanho, o local e o que fazer.</p><ol class="stepl"><li><b>Push recebido</b><em>Título com nível e local. Sem jargão técnico.</em></li><li><b>Início já mudou de cor</b><em>Coerência entre notificação e app aberto.</em></li><li><b>Detalhe da ocorrência</b><em>Valor, duração, horário, sensor responsável.</em></li><li><b>Card de orientação</b><em>O que verificar, na ordem certa.</em></li><li><b>Verificar ocorrência</b><em>O cidadão confirma o que encontrou.</em></li><li><b>Registro em Alertas</b><em>Vira histórico consultável.</em></li></ol></div>
+  </div>
+</section>
+
+<section class="doc-sec" data-od-id="uf-ia">
+  <span class="eyebrow">02 — Arquitetura de informação</span>
+  <h2>Cinco abas, nada escondido em menu</h2>
+  <p class="lede">“Minha residência” e “Pontos de consumo” são subtelas de Início, não abas. São telas de entendimento, visitadas na configuração e depois de uma ocorrência — não no uso diário.</p>
+  <div class="ia"><div class="ia-col"><header><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><b>Início</b></header><ul><li><b>Hero de status</b><span>US01 · US02</span></li><li><b>Indicadores rápidos</b><span>US02 · US12</span></li><li><b>Resumo dos sensores</b><span>US08</span></li><li><b>Minha residência ›</b><span>US04</span></li><li><b>Pontos de consumo ›</b><span>US04</span></li><li><b>Último evento ›</b><span>US07</span></li></ul></div> <div class="ia-col"><header><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M6.5 20v-6"/><path d="M11.5 20V7"/><path d="M16.5 20v-4"/><path d="M21 20V11"/></svg><b>Consumo</b></header><ul><li><b>Filtro Hoje / 7 / 30</b><span>US06</span></li><li><b>Gráfico de consumo</b><span>US06 · US12</span></li><li><b>Indicadores do período</b><span>US12</span></li><li><b>Ocorrências no período</b><span>US07</span></li></ul></div> <div class="ia-col"><header><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8"/><path d="M10.3 21a2 2 0 0 0 3.4 0"/></svg><b>Alertas</b></header><ul><li><b>Filtro por categoria</b><span>US05</span></li><li><b>Possível vazamento</b><span>US03 · US05</span></li><li><b>Sensor indisponível</b><span>US09</span></li><li><b>Fluxo fora do padrão</b><span>US03</span></li><li><b>Sistema e manutenção</b><span>US10</span></li></ul></div> <div class="ia-col"><header><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M8.5 15.5a5 5 0 0 1 0-7"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M5.5 18.5a9 9 0 0 1 0-13"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg><b>Sensores</b></header><ul><li><b>Resumo por estado</b><span>US08</span></li><li><b>Lista de sensores</b><span>US08</span></li><li><b>Detalhe do sensor ›</b><span>US08 · US09</span></li><li><b>Última atualização</b><span>US10</span></li></ul></div> <div class="ia-col"><header><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><b>Perfil</b></header><ul><li><b>Dados pessoais</b><span>—</span></li><li><b>Dados da residência</b><span>—</span></li><li><b>Notificações</b><span>US05</span></li><li><b>Privacidade e segurança</b><span>—</span></li><li><b>Ajuda</b><span>US11</span></li><li><b>Sair</b><span>—</span></li></ul></div></div>
+</section>
+
+<section class="doc-sec" data-od-id="uf-alerta">
+  <span class="eyebrow">03 — Fluxo de alerta</span>
+  <h2>Do sensor até a ação do cidadão</h2>
+  <p class="lede">O caminho crítico do produto. Cada etapa remove uma dúvida: existe problema? qual o tamanho? onde? o que eu faço?</p>
+  <div class="pipe"><div class="st "><span class="eyebrow">Etapa 01</span><b>Sensor mede o fluxo</b><p>Leitura contínua em cada ponto da rede hidráulica.</p></div><div class="st "><span class="eyebrow">Etapa 02</span><b>Sistema classifica</b><p>Compara o volume com as faixas de referência.</p></div><div class="st acc"><span class="eyebrow">Etapa 03</span><b>Anormalidade</b><p>Acima de 2 L o evento é aberto e ganha um nível.</p></div><div class="st "><span class="eyebrow">Etapa 04</span><b>Notificação</b><p>Push objetivo com nível, local e ação recomendada.</p></div><div class="st "><span class="eyebrow">Etapa 05</span><b>Detalhe e orientação</b><p>O que foi medido, onde, por quanto tempo e o que verificar.</p></div><div class="st "><span class="eyebrow">Etapa 06</span><b>Verificação do cidadão</b><p>A ocorrência é encerrada ou permanece em aberto.</p></div></div>
+  <div class="fork" data-od-id="uf-faixas">
+    <div class="f-ok"><b>Normal</b><span>até 2 L</span><p>Nenhuma notificação. O status permanece verde no Início.</p></div>
+    <div class="f-low"><b>Possível vazamento leve</b><span>2 – 5 L</span><p>Entra em Alertas, sem push. Card de orientação na ocorrência.</p></div>
+    <div class="f-mid"><b>Possível vazamento moderado</b><span>5 – 10 L</span><p>Push imediato. Hero do Início muda de cor. Orientação obrigatória.</p></div>
+    <div class="f-high"><b>Possível vazamento crítico</b><span>acima de 10 L</span><p>Push com prioridade alta e instrução de fechar o registro.</p></div>
+  </div>
+</section>
+
+<section class="doc-sec" data-od-id="uf-estados">
+  <span class="eyebrow">04 — Cobertura de estados</span>
+  <h2>O que cada tela precisa entregar além do estado ideal</h2>
+  <p class="lede">Nenhuma tela é considerada pronta sem as colunas marcadas. Ausência de dados nunca pode ser desenhada como situação normal.</p>
+  <table class="mx">
+    <thead><tr><th>Tela</th><th>Carregando</th><th>Vazio</th><th>Erro / offline</th><th>Sensor indisponível</th><th>Severidade</th></tr></thead>
+    <tbody>
+      <tr><td>Início</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">4 níveis</td></tr>
+      <tr><td>Consumo</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td>—</td><td class="y">marcação</td></tr>
+      <tr><td>Alertas</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">4 níveis</td></tr>
+      <tr><td>Sensores</td><td class="y">•</td><td>—</td><td class="y">•</td><td class="y">•</td><td>—</td></tr>
+      <tr><td>Pontos de consumo</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">•</td><td class="y">4 níveis</td></tr>
+      <tr><td>Detalhe da ocorrência</td><td class="y">•</td><td>—</td><td class="y">•</td><td class="y">•</td><td class="y">4 níveis</td></tr>
+      <tr><td>Minha residência</td><td class="y">•</td><td>—</td><td class="y">•</td><td class="y">•</td><td class="y">por trecho</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+</body>
+</html>

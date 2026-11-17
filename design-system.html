@@ -1,0 +1,565 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AQUASENSE — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/aquasense.css">
+<script src="assets/aquasense.js" defer></script>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side">
+    <div class="side-brand">
+      <img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="AQUASENSE">
+      <span>Design System v1</span>
+    </div>
+    <nav>
+      <a href="#marca">01 · Marca</a>
+      <a href="#cor">02 · Cor</a>
+      <a href="#severidade">03 · Severidade</a>
+      <a href="#tipografia">04 · Tipografia</a>
+      <a href="#layout">05 · Forma e espaço</a>
+      <a href="#componentes">06 · Componentes</a>
+      <a href="#navegacao">07 · Navegação</a>
+      <a href="#estados">08 · Estados</a>
+      <a href="#linguagem">09 · Linguagem</a>
+    </nav>
+    <div class="side-note">
+      Tom cromático herdado da referência&nbsp;1 (app de consumo de água). Arquitetura de componentes herdada da referência&nbsp;2 (kit de app financeiro). Cores da marca amostradas dos arquivos de logo.
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <p class="hero-eyebrow">Gestão inteligente da água · IoT residencial</p>
+    <h1>AQUASENSE Design System</h1>
+    <p class="lede">A base visual do app. Uma regra governa tudo: <strong>cor é reservada para status</strong>. Se algo está colorido fora da paleta de marca, é porque significa alguma coisa. Isso é o que permite o cidadão responder “está tudo bem?” em dois segundos.</p>
+
+    <!-- ================= 01 MARCA ================= -->
+    <section id="marca">
+      <h2>01</h2>
+      <p class="h2sub">Marca</p>
+      <p class="sec-lede">O logotipo já define a bipolaridade cromática do produto: um azul profundo que ancora e um ciano que sinaliza. O app inteiro sai daí.</p>
+
+      <div class="grid g3">
+        <div class="logo-card">
+          <div class="frame"><img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="Assinatura horizontal"></div>
+          <div class="logo-meta"><strong>Horizontal</strong><span>Padrão. Topbar, login, cabeçalhos.</span></div>
+        </div>
+        <div class="logo-card">
+          <div class="frame"><img src="img/VARIAC_A_O-2---AQUASENSE.png" alt="Assinatura empilhada"></div>
+          <div class="logo-meta"><strong>Empilhada</strong><span>Splash e onboarding.</span></div>
+        </div>
+        <div class="logo-card">
+          <div class="frame"><img src="img/ISO_TIPO---AQUASENSE.png" alt="Isotipo"></div>
+          <div class="logo-meta"><strong>Isotipo</strong><span>App icon, avatar, favicon, espaços &lt; 40px.</span></div>
+        </div>
+      </div>
+
+      <h3>Uso sobre fundo escuro</h3>
+      <div class="grid g2">
+        <div class="logo-card">
+          <div class="frame dark"><img src="img/VARIAC_A_O-3---AQUASENSE.png" alt="Assinatura em negativo"></div>
+          <div class="logo-meta"><strong>Negativo monocromático</strong><span>Sobre <code>--deep</code> ou sobre o hero de status. Nunca aplicar o logo colorido sobre fundo escuro.</span></div>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Regras</h3>
+          <div class="tok"><span class="k">Área de respiro</span><span class="v">= altura do “A”</span></div>
+          <div class="tok"><span class="k">Tamanho mínimo</span><span class="v">horizontal 120px</span></div>
+          <div class="tok"><span class="k">Isotipo mínimo</span><span class="v">24px</span></div>
+          <div class="tok"><span class="k">Proibido</span><span class="v">girar, distorcer, recolorir, aplicar sombra</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 COR ================= -->
+    <section id="cor">
+      <h2>02</h2>
+      <p class="h2sub">Cor</p>
+      <p class="sec-lede">Marca amostrada dos arquivos de logo. O azul-céu de interação vem da referência&nbsp;1 — é ele que faz a ponte entre o profundo institucional e o ciano do sensor.</p>
+
+      <h3>Marca</h3>
+      <div class="grid g4">
+        <div class="sw"><div class="chip" style="background:#1C4F73"></div><div class="meta"><b>Deep</b><code>#1C4F73</code><em>Hero, headers, botão primário</em></div></div>
+        <div class="sw"><div class="chip" style="background:#27B9CB"></div><div class="meta"><b>Cyan</b><code>#27B9CB</code><em>Sensor, dados vivos, botão secundário</em></div></div>
+        <div class="sw"><div class="chip" style="background:#26A9E1"></div><div class="meta"><b>Sky</b><code>#26A9E1</code><em>Interação: link, aba ativa, foco, gráfico</em></div></div>
+        <div class="sw"><div class="chip" style="background:#E5F5FC"></div><div class="meta"><b>Sky 100</b><code>#E5F5FC</code><em>Fundo de ícone, seleção, tint</em></div></div>
+      </div>
+
+      <h3>Neutros</h3>
+      <div class="grid g5">
+        <div class="sw"><div class="chip" style="background:#F1F8FB"></div><div class="meta"><b>Background</b><code>#F1F8FB</code></div></div>
+        <div class="sw"><div class="chip" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px #DCE8EF"></div><div class="meta"><b>Surface</b><code>#FFFFFF</code></div></div>
+        <div class="sw"><div class="chip" style="background:#DCE8EF"></div><div class="meta"><b>Border</b><code>#DCE8EF</code></div></div>
+        <div class="sw"><div class="chip" style="background:#41637A"></div><div class="meta"><b>Ink 2</b><code>#41637A</code></div></div>
+        <div class="sw"><div class="chip" style="background:#0F2A3D"></div><div class="meta"><b>Ink</b><code>#0F2A3D</code></div></div>
+      </div>
+    </section>
+
+    <!-- ================= 03 SEVERIDADE ================= -->
+    <section id="severidade">
+      <h2>03</h2>
+      <p class="h2sub">Severidade e estado de sensor</p>
+      <p class="sec-lede">Cada faixa de fluxo tem três valores: a cor de sinal (preenchimentos, pontos, bordas), a cor de texto escurecida (contraste AA sobre branco) e o tint de fundo. <strong>Nunca use a cor de sinal como cor de texto.</strong></p>
+
+      <table class="sev-table">
+        <thead><tr><th>Nível</th><th>Faixa</th><th>Sinal</th><th>Texto</th><th>Fundo</th><th>Rótulo no app</th></tr></thead>
+        <tbody>
+          <tr><td><span class="dot" style="background:#17A34A"></span><b>Normal</b></td><td class="num">até 2 L</td><td class="hexpair">#17A34A</td><td class="hexpair">#0F7A37</td><td class="hexpair">#E8F6ED</td><td>Fluxo normal</td></tr>
+          <tr><td><span class="dot" style="background:#E0A413"></span><b>Leve</b></td><td class="num">2 – 5 L</td><td class="hexpair">#E0A413</td><td class="hexpair">#8A6209</td><td class="hexpair">#FCF3DF</td><td>Possível vazamento leve</td></tr>
+          <tr><td><span class="dot" style="background:#ED7014"></span><b>Moderado</b></td><td class="num">5 – 10 L</td><td class="hexpair">#ED7014</td><td class="hexpair">#9A4708</td><td class="hexpair">#FDEEE1</td><td>Possível vazamento moderado</td></tr>
+          <tr><td><span class="dot" style="background:#D93B30"></span><b>Crítico</b></td><td class="num">acima de 10 L</td><td class="hexpair">#D93B30</td><td class="hexpair">#9E2A22</td><td class="hexpair">#FBE9E7</td><td>Possível vazamento crítico</td></tr>
+          <tr><td><span class="dot" style="background:#7C8DA0"></span><b>Indisponível</b></td><td>sem dados</td><td class="hexpair">#7C8DA0</td><td class="hexpair">#4C5C6B</td><td class="hexpair">#EDF1F5</td><td>Sensor indisponível</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Por que “indisponível” é cinza</h3>
+      <div class="dd">
+        <div class="box yes">
+          <span>Correto</span>
+          <p>Sensor sem dados usa <b>cinza neutro</b>, a <b>última leitura conhecida riscada</b> e o carimbo de horário: <em>“Sem dados desde 11:40”</em>.</p>
+          <p>Riscar um travessão não comunica nada e ainda vira um glifo ilegível. Riscar o último valor real diz duas coisas: o que se sabia e que aquilo já venceu.</p>
+        </div>
+        <div class="box no">
+          <span>Errado</span>
+          <p>Verde: o usuário lê “tudo certo” onde o sistema não sabe de nada.</p>
+          <p>Vermelho: o usuário corre atrás de um vazamento que não existe e perde a confiança no app.</p>
+        </div>
+      </div>
+
+      <h3>Badges</h3>
+      <div class="panel" style="display:flex;gap:10px;flex-wrap:wrap">
+        <span class="badge ok"><span class="dot" style="background:#17A34A;margin:0"></span>Fluxo normal</span>
+        <span class="badge low"><span class="dot" style="background:#E0A413;margin:0"></span>Possível vazamento leve</span>
+        <span class="badge mid"><span class="dot" style="background:#ED7014;margin:0"></span>Possível vazamento moderado</span>
+        <span class="badge high"><span class="dot" style="background:#D93B30;margin:0"></span>Possível vazamento crítico</span>
+        <span class="badge off"><span class="dot" style="background:#7C8DA0;margin:0"></span>Sensor indisponível</span>
+      </div>
+    </section>
+
+    <!-- ================= 04 TIPOGRAFIA ================= -->
+    <section id="tipografia">
+      <h2>04</h2>
+      <p class="h2sub">Tipografia</p>
+      <p class="sec-lede"><strong>Space Grotesk</strong> nos papéis de display — as formas geométricas de largura constante ecoam as letras do logotipo. <strong>Inter</strong> em corpo e interface, <strong>JetBrains Mono</strong> em rótulos e carimbos de horário. Numeral tabular é obrigatório em todo valor de litragem: sem isso, uma lista de sensores “dança” a cada atualização.</p>
+
+      <div class="panel">
+        <div class="type-row"><span class="tag">display · Space Grotesk · 34/40 · 700</span><div class="t-display num">7,4 L</div></div>
+        <div class="type-row"><span class="tag">h1 · Space Grotesk · 24/32 · 650</span><div class="t-h1">Possível vazamento moderado</div></div>
+        <div class="type-row"><span class="tag">h2 · Space Grotesk · 20/28 · 650</span><div class="t-h2">Pontos de consumo</div></div>
+        <div class="type-row"><span class="tag">title · Inter · 17/24 · 600</span><div class="t-title">Torneira da cozinha</div></div>
+        <div class="type-row"><span class="tag">body · Inter · 15/22 · 400</span><div class="t-body">Foi identificado fluxo acima do padrão no banheiro. Verifique torneiras, chuveiro e descarga.</div></div>
+        <div class="type-row"><span class="tag">caption · Inter · 13/18 · 500</span><div class="t-cap">Atualizado há 4 minutos</div></div>
+        <div class="type-row"><span class="tag">micro · JetBrains Mono · 11/16 · 600</span><div class="t-micro">Consumo do dia</div></div>
+      </div>
+
+      <h3>Padrão de valor</h3>
+      <div class="panel" style="display:flex;gap:40px;align-items:flex-end;flex-wrap:wrap">
+        <div><div class="t-micro" style="margin-bottom:4px">Fluxo atual</div><div class="t-display num">1,4<span style="font-size:18px;font-weight:600;color:var(--muted);margin-left:3px">L</span></div></div>
+        <div><div class="t-micro" style="margin-bottom:4px">Consumo do dia</div><div class="t-display num">142<span style="font-size:18px;font-weight:600;color:var(--muted);margin-left:3px">L</span></div></div>
+        <div><div class="t-micro" style="margin-bottom:4px">Consumo do mês</div><div class="t-display num">3.180<span style="font-size:18px;font-weight:600;color:var(--muted);margin-left:3px">L</span></div></div>
+        <p style="font-size:12.5px;color:var(--muted);max-width:24ch;margin:0">Número em <code>display</code>, unidade em 18px/600 <code>--muted</code>. Vírgula decimal, ponto de milhar.</p>
+      </div>
+    </section>
+
+    <!-- ================= 05 LAYOUT ================= -->
+    <section id="layout">
+      <h2>05</h2>
+      <p class="h2sub">Forma e espaço</p>
+      <p class="sec-lede">Grade de 8px, margem lateral de 20px, uma única sombra em todo o produto. A referência&nbsp;2 usa cantos contidos — mantemos isso e reservamos o formato pílula só para controles de filtro e badges.</p>
+
+      <div class="grid g2">
+        <div class="panel">
+          <h3 style="margin-top:0">Raio</h3>
+          <div class="tok"><span class="k">--r-sm</span><span class="v">8px</span><span class="demo"><div class="rbox" style="border-radius:8px"></div></span></div>
+          <div class="tok"><span class="k">--r-md</span><span class="v">12px</span><span class="demo"><div class="rbox" style="border-radius:12px"></div></span></div>
+          <div class="tok"><span class="k">--r-lg</span><span class="v">16px</span><span class="demo"><div class="rbox" style="border-radius:16px"></div></span></div>
+          <div class="tok"><span class="k">--r-xl</span><span class="v">20px</span><span class="demo"><div class="rbox" style="border-radius:20px"></div></span></div>
+          <div class="tok"><span class="k">--r-pill</span><span class="v">999px</span><span class="demo"><div class="rbox" style="border-radius:999px"></div></span></div>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Espaço</h3>
+          <div class="tok"><span class="k">space-1</span><span class="v">4px</span><span class="demo"><div class="sbar" style="width:4px"></div></span></div>
+          <div class="tok"><span class="k">space-2</span><span class="v">8px</span><span class="demo"><div class="sbar" style="width:8px"></div></span></div>
+          <div class="tok"><span class="k">space-3</span><span class="v">12px</span><span class="demo"><div class="sbar" style="width:12px"></div></span></div>
+          <div class="tok"><span class="k">space-4</span><span class="v">16px</span><span class="demo"><div class="sbar" style="width:16px"></div></span></div>
+          <div class="tok"><span class="k">space-5</span><span class="v">20px</span><span class="demo"><div class="sbar" style="width:20px"></div></span></div>
+          <div class="tok"><span class="k">space-6</span><span class="v">24px</span><span class="demo"><div class="sbar" style="width:24px"></div></span></div>
+          <div class="tok"><span class="k">space-8</span><span class="v">32px</span><span class="demo"><div class="sbar" style="width:32px"></div></span></div>
+        </div>
+      </div>
+
+      <h3>Elevação e alvo de toque</h3>
+      <div class="panel">
+        <div class="tok"><span class="k">--shadow</span><span class="v">cards</span><span class="demo"><div style="width:120px;height:38px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow)"></div></span></div>
+        <div class="tok"><span class="k">--shadow-lift</span><span class="v">hero, modal</span><span class="demo"><div style="width:120px;height:38px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lift)"></div></span></div>
+        <div class="tok"><span class="k">touch mínimo</span><span class="v">44 × 44px</span><span class="demo" style="font-size:12px;color:var(--muted)">sem exceção, inclusive no ícone de fechar</span></div>
+        <div class="tok"><span class="k">gutter</span><span class="v">20px</span><span class="demo" style="font-size:12px;color:var(--muted)">margem lateral de todas as telas</span></div>
+      </div>
+    </section>
+
+    <!-- ================= 06 COMPONENTES ================= -->
+    <section id="componentes">
+      <h2>06</h2>
+      <p class="h2sub">Componentes</p>
+      <p class="sec-lede">Estrutura herdada do kit da referência&nbsp;2 — botão sólido de largura total, campo alto de 52px, linha de lista com ícone circular à esquerda e valor à direita, verificação por OTP. Recolorido para AQUASENSE.</p>
+
+      <h3>Botões</h3>
+      <div class="panel">
+        <div style="max-width:360px;display:flex;flex-direction:column;gap:12px">
+          <button class="btn btn-primary">Entrar</button>
+          <button class="btn btn-secondary">Verificar ocorrência</button>
+          <button class="btn btn-outline">Ver histórico do ponto</button>
+          <button class="btn btn-ghost">Esqueci minha senha</button>
+          <button class="btn btn-danger">Remover sensor</button>
+          <button class="btn btn-primary" disabled>Entrar</button>
+          <div class="btn-row">
+            <button class="btn btn-outline">Cancelar</button>
+            <button class="btn btn-primary">Salvar</button>
+          </div>
+          <div style="display:flex;gap:10px"><button class="btn btn-outline btn-sm">7 dias</button><button class="btn btn-secondary btn-sm">Atualizar</button></div>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted);margin:16px 0 0">Em qualquer par de ações, a secundária vem antes da primária. <code>Cancelar</code> à esquerda, <code>Salvar</code> à direita — inclusive em confirmações destrutivas.</p>
+      </div>
+
+      <h3>Campos e verificação</h3>
+      <div class="grid g2">
+        <div class="panel">
+          <div class="field">
+            <label for="ds-email">E-mail ou CPF</label>
+            <input class="input" id="ds-email" type="text" placeholder="voce@email.com">
+          </div>
+          <div class="field">
+            <label for="ds-pwd">Senha</label>
+            <input class="input" id="ds-pwd" type="password" value="123456">
+            <p class="hint">Mínimo de 8 caracteres.</p>
+          </div>
+          <div class="field">
+            <label for="ds-err">Telefone</label>
+            <input class="input is-error" id="ds-err" type="tel" value="(11) 9999">
+            <p class="err">Informe um telefone com 11 dígitos.</p>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:4px">
+            <div><b style="font-size:14px">Alertas por push</b><div style="font-size:12.5px;color:var(--muted)">Vazamento e sensor offline</div></div>
+            <div class="toggle" role="switch" aria-checked="true" tabindex="0" aria-label="Alertas por push"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <label style="display:block;font-size:12.5px;font-weight:600;color:var(--ink-2);margin-bottom:10px">Código de verificação</label>
+          <div class="otp">
+            <input class="filled" value="5" maxlength="1" aria-label="Dígito 1">
+            <input class="filled" value="2" maxlength="1" aria-label="Dígito 2">
+            <input value="" maxlength="1" aria-label="Dígito 3">
+            <input value="" maxlength="1" aria-label="Dígito 4">
+          </div>
+          <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">Enviamos um código de 4 dígitos para <b style="color:var(--ink)">(11) 9****-1234</b>.</p>
+          <p style="font-size:12.5px;margin:8px 0 0"><span style="color:var(--muted)">Reenviar em </span><b class="num" style="color:var(--sky-ink)">00:42</b></p>
+
+          <div style="margin-top:24px">
+            <label style="display:block;font-size:12.5px;font-weight:600;color:var(--ink-2);margin-bottom:10px">Filtro de período</label>
+            <div class="seg">
+              <button aria-pressed="true">Hoje</button>
+              <button aria-pressed="false">7 dias</button>
+              <button aria-pressed="false">30 dias</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Hero de status — o componente central do app</h3>
+      <p class="sec-lede">É a primeira coisa da tela Início. Responde “está tudo bem?” antes de qualquer rolagem. Muda de cor por severidade; a onda é a assinatura visual da marca.</p>
+      <div class="devices">
+        <div>
+          <div class="device"><div class="screen" style="padding-top:18px">
+            <div class="hero is-ok">
+              <svg class="wave" viewBox="0 0 340 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,28 C56,6 112,50 170,28 C228,6 284,50 340,28 L340,56 L0,56 Z" fill="#fff"/></svg>
+              <div class="hero-top">
+                <span class="hero-state"><span class="dot" style="background:#4ADE80"></span>Fluxo normal</span>
+                <span style="font-size:11px;opacity:.72;font-family:var(--mono)">há 4 min</span>
+              </div>
+              <h4>Tudo certo por aqui</h4>
+              <p>Nenhuma anormalidade identificada na sua residência.</p>
+              <div class="hero-foot">
+                <div><span>Fluxo atual</span><b class="num">1,4 L</b></div>
+                <div><span>Hoje</span><b class="num">142 L</b></div>
+                <div><span>Mês</span><b class="num">3.180 L</b></div>
+              </div>
+            </div>
+          </div></div>
+          <p class="device-cap">Estado normal</p>
+        </div>
+        <div>
+          <div class="device"><div class="screen" style="padding-top:18px">
+            <div class="hero is-mid">
+              <svg class="wave" viewBox="0 0 340 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,28 C56,6 112,50 170,28 C228,6 284,50 340,28 L340,56 L0,56 Z" fill="#fff"/></svg>
+              <div class="hero-top">
+                <span class="hero-state"><span class="dot" style="background:#FDBA74"></span>Possível vazamento moderado</span>
+                <span style="font-size:11px;opacity:.72;font-family:var(--mono)">há 1 min</span>
+              </div>
+              <h4>Fluxo fora do padrão</h4>
+              <p>Identificamos fluxo acima do padrão no banheiro.</p>
+              <div class="hero-foot">
+                <div><span>Registrado</span><b class="num">7,4 L</b></div>
+                <div><span>Duração</span><b class="num">28 min</b></div>
+                <div><span>Local</span><b style="font-size:15px">Banheiro</b></div>
+              </div>
+            </div>
+          </div></div>
+          <p class="device-cap">Severidade moderada</p>
+        </div>
+        <div>
+          <div class="device"><div class="screen" style="padding-top:18px">
+            <div class="hero is-high">
+              <svg class="wave" viewBox="0 0 340 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,28 C56,6 112,50 170,28 C228,6 284,50 340,28 L340,56 L0,56 Z" fill="#fff"/></svg>
+              <div class="hero-top">
+                <span class="hero-state"><span class="dot" style="background:#FCA5A5"></span>Possível vazamento crítico</span>
+                <span style="font-size:11px;opacity:.72;font-family:var(--mono)">agora</span>
+              </div>
+              <h4>Verifique sua residência</h4>
+              <p>Fluxo muito acima do padrão na área externa.</p>
+              <div class="hero-foot">
+                <div><span>Registrado</span><b class="num">14,2 L</b></div>
+                <div><span>Duração</span><b class="num">51 min</b></div>
+                <div><span>Local</span><b style="font-size:15px">Externa</b></div>
+              </div>
+            </div>
+          </div></div>
+          <p class="device-cap">Severidade crítica</p>
+        </div>
+      </div>
+
+      <h3>Indicadores rápidos e fluxo da casa</h3>
+      <div class="grid g2">
+        <div class="panel">
+          <div class="grid g2" style="gap:12px">
+            <div class="stat"><span>Fluxo atual</span><b class="num">1,4<i>L</i></b></div>
+            <div class="stat"><span>Consumo do dia</span><b class="num">142<i>L</i></b></div>
+            <div class="stat"><span>Consumo do mês</span><b class="num">3.180<i>L</i></b></div>
+            <div class="stat"><span>Sensores ativos</span><b class="num">5<i>de 6</i></b></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="flow">
+            <div class="node"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h12M15 8l4 4-4 4"/></svg></i><b>Entrada</b></div>
+            <svg class="arr" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+            <div class="node"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M4 12h16"/></svg></i><b>Caixa</b></div>
+            <svg class="arr" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+            <div class="node"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v6M12 10L6 20M12 10l6 10"/></svg></i><b>Distribuição</b></div>
+            <svg class="arr" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+            <div class="node alert"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></i><b>Pontos</b></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">O trecho com anormalidade acende na cor da severidade. Explica de onde a água vem e para onde vai sem exigir planta baixa.</p>
+        </div>
+      </div>
+
+      <h3>Linhas de lista</h3>
+      <div class="grid g2">
+        <div class="panel">
+          <div class="t-micro" style="margin-bottom:8px">Pontos de consumo</div>
+          <div class="row">
+            <div class="ic ok"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M7 3v5a5 5 0 0 0 10 0V3"/><path d="M12 13v8"/><path d="M9 21h6"/></svg></div>
+            <div class="txt"><b>Chuveiro</b><span>Banheiro · há 2 min</span></div>
+            <div class="end"><span class="val num">0,0 L</span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></div>
+          </div>
+          <div class="row">
+            <div class="ic ok"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 8h7a4 4 0 0 1 4 4v1"/><path d="M4 5v6"/><path d="M15 16v4"/></svg></div>
+            <div class="txt"><b>Torneira da cozinha</b><span>Cozinha · há 1 min</span></div>
+            <div class="end"><span class="val num">1,4 L</span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></div>
+          </div>
+          <div class="row">
+            <div class="ic mid"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 8h7a4 4 0 0 1 4 4v1"/><path d="M4 5v6"/><path d="M15 16v4"/></svg></div>
+            <div class="txt"><b>Torneira externa</b><span>Área externa · há 1 min</span></div>
+            <div class="end"><span class="val num" style="color:var(--mid-ink)">7,4 L</span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></div>
+          </div>
+          <div class="row">
+            <div class="ic off"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M2 2l20 20"/><path d="M5 12.5a10 10 0 0 1 4-2.4"/><path d="M12 20h.01"/><path d="M8.8 16.3a5 5 0 0 1 6.4 0"/></svg></div>
+            <div class="txt"><b>Caixa d'água</b><span>Sem dados desde 11:40</span></div>
+            <div class="end"><span class="val num is-off">0,8 L</span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="t-micro" style="margin-bottom:8px">Eventos anteriores</div>
+          <div class="row">
+            <div class="ic mid"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+            <div class="txt"><b>Possível vazamento moderado</b><span>Banheiro · 24/08 13:24 · 28 min</span></div>
+            <div class="end"><span class="badge mid">Em aberto</span></div>
+          </div>
+          <div class="row">
+            <div class="ic low"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+            <div class="txt"><b>Possível vazamento leve</b><span>Cozinha · 22/08 07:10 · 12 min</span></div>
+            <div class="end"><span class="badge ok">Resolvido</span></div>
+          </div>
+          <div class="row">
+            <div class="ic off"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M2 2l20 20"/><path d="M5 12.5a10 10 0 0 1 4-2.4"/><path d="M12 20h.01"/></svg></div>
+            <div class="txt"><b>Sensor indisponível</b><span>Caixa d'água · 21/08 11:40</span></div>
+            <div class="end"><span class="badge off">Ativo</span></div>
+          </div>
+          <div class="row">
+            <div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="txt"><b>Sistema atualizado</b><span>20/08 03:00</span></div>
+            <div class="end"><span class="badge off">Informativo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Avisos e orientação</h3>
+      <div class="grid g3">
+        <div class="banner mid">
+          <span class="bi"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+          <div><b>Possível vazamento moderado</b><p>Fluxo de 7,4 L registrado no banheiro há 28 minutos.</p></div>
+        </div>
+        <div class="banner off">
+          <span class="bi"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l20 20"/><path d="M5 12.5a10 10 0 0 1 4-2.4"/><path d="M12 20h.01"/></svg></span>
+          <div><b>Sensor indisponível</b><p>Não recebemos dados da caixa d'água desde 11:40.</p></div>
+        </div>
+        <div class="banner high">
+          <span class="bi"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
+          <div><b>Sem conexão</b><p>Não foi possível atualizar os dados. Exibindo a última leitura de 11:40.</p></div>
+        </div>
+      </div>
+
+      <div class="grid g2" style="margin-top:16px">
+        <div class="guide">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>O que fazer agora</span>
+          <p>Foi identificado fluxo acima do padrão no <b>banheiro</b>. Verifique torneiras, chuveiro e descarga. Se todos estiverem fechados, feche o registro do banheiro e acompanhe se o fluxo cai.</p>
+        </div>
+        <div class="panel" style="display:flex;flex-direction:column;justify-content:center;gap:10px">
+          <div class="t-micro">Regra do card de orientação</div>
+          <p style="margin:0;font-size:13.5px;color:var(--ink-2)">Toda tela de severidade acima de “normal” <b>obriga</b> um card de orientação. Uma ocorrência sem instrução de ação deixa o cidadão travado — é o requisito US11.</p>
+        </div>
+      </div>
+
+      <h3>Gráfico</h3>
+      <div class="panel" style="max-width:560px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px">
+          <div><div class="t-micro" style="margin-bottom:3px">Consumo · 7 dias</div><div class="t-h1 num">1.024 L</div></div>
+          <div class="seg"><button aria-pressed="false">Hoje</button><button aria-pressed="true">7 dias</button><button aria-pressed="false">30 dias</button></div>
+        </div>
+        <svg class="chart" viewBox="0 0 480 132" preserveAspectRatio="none" aria-label="Consumo dos últimos 7 dias">
+          <defs><linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26A9E1" stop-opacity=".22"/><stop offset="100%" stop-color="#26A9E1" stop-opacity="0"/></linearGradient></defs>
+          <line x1="0" y1="33" x2="480" y2="33" stroke="#DCE8EF" stroke-width="1"/>
+          <line x1="0" y1="76" x2="480" y2="76" stroke="#DCE8EF" stroke-width="1"/>
+          <line x1="0" y1="119" x2="480" y2="119" stroke="#DCE8EF" stroke-width="1"/>
+          <path d="M0,92 C40,84 60,58 100,62 C140,66 160,96 200,90 C240,84 250,34 290,40 C330,46 350,78 390,72 C430,66 450,52 480,58 L480,132 L0,132 Z" fill="url(#gfill)"/>
+          <path d="M0,92 C40,84 60,58 100,62 C140,66 160,96 200,90 C240,84 250,34 290,40 C330,46 350,78 390,72 C430,66 450,52 480,58" fill="none" stroke="#26A9E1" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="290" cy="40" r="5" fill="#fff" stroke="#26A9E1" stroke-width="2.5"/>
+        </svg>
+        <div class="chart-x"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+        <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">Uma série só, sempre <code>--sky</code>, sem legenda. Dias com ocorrência ganham um ponto na cor da severidade — nunca uma segunda linha.</p>
+      </div>
+    </section>
+
+    <!-- ================= 07 NAVEGAÇÃO ================= -->
+    <section id="navegacao">
+      <h2>07</h2>
+      <p class="h2sub">Navegação</p>
+      <p class="sec-lede">Cinco abas fixas. <strong>Início</strong> é o destino padrão e concentra o que é crítico. “Minha residência” não recebe aba própria — é um card dentro de Início que abre em tela cheia, porque é uma tela de entendimento, não de uso diário.</p>
+      <div class="device" style="width:380px">
+        <div class="tabbar">
+          <a href="#navegacao" class="active"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Início</a>
+          <a href="#navegacao"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-7"/><path d="M11 20V7"/><path d="M16 20v-4"/><path d="M21 20V10"/></svg>Consumo</a>
+          <a href="#navegacao"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8"/><path d="M10.3 21a2 2 0 0 0 3.4 0"/></svg>Alertas</a>
+          <a href="#navegacao"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M8.5 15.5a5 5 0 0 1 0-7"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M5.5 18.5a9 9 0 0 1 0-13"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>Sensores</a>
+          <a href="#navegacao"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 ESTADOS ================= -->
+    <section id="estados">
+      <h2>08</h2>
+      <p class="h2sub">Estados obrigatórios</p>
+      <p class="sec-lede">Nenhuma tela é entregue só no estado ideal. Toda lista e todo gráfico precisam dos quatro: carregando, vazio, erro e sem conexão.</p>
+
+      <div class="grid g4">
+        <div class="card">
+          <div class="t-micro" style="margin-bottom:12px">Carregando</div>
+          <div class="sk" style="height:88px;border-radius:14px;margin-bottom:14px"></div>
+          <div class="sk" style="height:13px;width:70%;margin-bottom:8px"></div>
+          <div class="sk" style="height:13px;width:45%;margin-bottom:16px"></div>
+          <div style="display:flex;gap:11px;align-items:center;margin-bottom:12px"><div class="sk" style="width:42px;height:42px;border-radius:12px;flex:none"></div><div style="flex:1"><div class="sk" style="height:11px;width:62%;margin-bottom:6px"></div><div class="sk" style="height:10px;width:40%"></div></div></div>
+          <div style="display:flex;gap:11px;align-items:center"><div class="sk" style="width:42px;height:42px;border-radius:12px;flex:none"></div><div style="flex:1"><div class="sk" style="height:11px;width:52%;margin-bottom:6px"></div><div class="sk" style="height:10px;width:34%"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="t-micro">Sem ocorrências</div>
+          <div class="empty">
+            <div class="eic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <b>Nenhuma anormalidade</b>
+            <p>Não existem anormalidades registradas na sua residência.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="t-micro">Sem histórico</div>
+          <div class="empty">
+            <div class="eic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M7 20v-5"/><path d="M12 20v-9"/><path d="M17 20v-3"/></svg></div>
+            <b>Ainda sem dados</b>
+            <p>Comece a utilizar o sistema para visualizar seu histórico.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="t-micro">Erro / sem conexão</div>
+          <div class="empty">
+            <div class="eic" style="background:var(--off-bg);color:var(--off-ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20"/><path d="M5 12.5a10 10 0 0 1 4-2.4"/><path d="M12 20h.01"/><path d="M8.8 16.3a5 5 0 0 1 6.4 0"/></svg></div>
+            <b>Sem conexão</b>
+            <p>Não conseguimos atualizar os dados agora.</p>
+          </div>
+          <button class="btn btn-outline btn-sm" style="width:100%">Tentar novamente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 09 LINGUAGEM ================= -->
+    <section id="linguagem">
+      <h2>09</h2>
+      <p class="h2sub">Linguagem</p>
+      <p class="sec-lede">O sistema detecta padrões de fluxo, não confirma vazamentos. A interface nunca pode prometer uma precisão que o hardware não entrega. Estas strings são fixas no design system — componentes de severidade não aceitam texto livre.</p>
+
+      <div class="dd">
+        <div class="box yes">
+          <span>Usar</span>
+          <p>“Possível vazamento moderado”</p>
+          <p>“Foi identificado fluxo fora do padrão no chuveiro.”</p>
+          <p>“Anormalidade identificada na área externa.”</p>
+          <p>“Verifique torneiras, chuveiro e descarga do banheiro.”</p>
+          <p>“Sem dados desde 11:40.”</p>
+        </div>
+        <div class="box no">
+          <span>Nunca usar</span>
+          <p>“Vazamento confirmado”</p>
+          <p>“O chuveiro está vazando.”</p>
+          <p>“Detectamos um vazamento de 7,4 L.”</p>
+          <p>“Anomalia de vazão no ramal secundário.”</p>
+          <p>“Sensor 03 · payload timeout”</p>
+        </div>
+      </div>
+
+      <h3>Hierarquia de leitura de toda tela crítica</h3>
+      <div class="panel">
+        <div class="flow" style="border:none;padding:0;background:none">
+          <div class="node"><i>1</i><b>Status<br>da residência</b></div>
+          <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+          <div class="node"><i>2</i><b>Possível<br>problema</b></div>
+          <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+          <div class="node"><i>3</i><b>Localização</b></div>
+          <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+          <div class="node"><i>4</i><b>Orientação</b></div>
+          <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+          <div class="node"><i>5</i><b>Histórico</b></div>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted);margin:16px 0 0;text-align:center">Esta ordem é inegociável. O histórico nunca aparece acima da orientação.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

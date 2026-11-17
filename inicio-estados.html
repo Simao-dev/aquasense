@@ -1,0 +1,691 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AQUASENSE — Início, estados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
+</head>
+
+<body class="gal">
+  <div class="gal"><a class="gal-back" href="inicio.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6" />
+      </svg> Voltar para Início</a>
+    <h1>Início — estados obrigatórios</h1>
+    <p>A mesma tela nos sete estados que o sistema pode produzir. O hero muda de cor e de frase; a estrutura nunca muda
+      de lugar, para o cidadão não precisar reaprender a tela quando algo dá errado.</p>
+    <div class="gal-grid">
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <section class="hero s-ok" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#4ADE80"></span>Fluxo
+                  normal</span><span class="hero-time">há 4 min</span></div>
+              <h2>Tudo certo por aqui</h2>
+              <p>Nenhuma anormalidade identificada na sua residência.</p>
+              <div class="hero-foot">
+                <div><span>Fluxo agora</span><b>1,4 L</b></div>
+                <div><span>Hoje</span><b>142 L</b></div>
+                <div><span>Este mês</span><b>3.180 L</b></div>
+              </div>
+            </section><a class="card" href="#" data-od-id="resumo-sensores"
+              style="margin-top:14px;display:flex;gap:6px;text-decoration:none;color:inherit;align-items:stretch">
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--ok-ink)">4</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Funcionando</span></div>
+              <div style="width:1px;background:var(--border)"></div>
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--low-ink)">1</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Atenção</span></div>
+              <div style="width:1px;background:var(--border)"></div>
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--off-ink)">1</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Indisponível</span></div>
+            </a>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a>
+              <!-- <a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a> -->
+              <a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Fluxo normal</b><span>até 2 L</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <section class="hero s-low" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FDE68A"></span>Possível vazamento leve</span><span class="hero-time">há 2
+                  min</span></div>
+              <h2>Fluxo um pouco acima do padrão</h2>
+              <p>Identificamos 3,2 L na torneira externa.</p>
+              <div class="hero-foot">
+                <div><span>Registrado</span><b>3,2 L</b></div>
+                <div><span>Duração</span><b>19 min</b></div>
+                <div><span>Local</span><b>Externa</b></div>
+              </div>
+            </section>
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6" />
+                  <path d="M10 21.5h4" />
+                  <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+                </svg> O que fazer agora</span>
+              <p>Verifique a torneira da área externa e a mangueira do jardim. Se estiverem fechadas, acompanhe pelas
+                próximas horas.</p>
+            </div>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Possível vazamento leve</b><span>acima de 2 L até 5 L</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <section class="hero s-mid" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FDBA74"></span>Possível vazamento moderado</span><span class="hero-time">há 1
+                  min</span></div>
+              <h2>Fluxo fora do padrão</h2>
+              <p>Identificamos fluxo acima do padrão no banheiro.</p>
+              <div class="hero-foot">
+                <div><span>Registrado</span><b>7,4 L</b></div>
+                <div><span>Duração</span><b>28 min</b></div>
+                <div><span>Local</span><b>Banheiro</b></div>
+              </div>
+            </section>
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6" />
+                  <path d="M10 21.5h4" />
+                  <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+                </svg> O que fazer agora</span>
+              <p>Verifique torneiras, chuveiro e descarga do banheiro. Se todos estiverem fechados, feche o registro do
+                banheiro e acompanhe se o fluxo cai.</p>
+            </div>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Possível vazamento moderado</b><span>acima de 5 L até 10 L</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <section class="hero s-high" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FCA5A5"></span>Possível vazamento crítico</span><span
+                  class="hero-time">agora</span></div>
+              <h2>Verifique sua residência</h2>
+              <p>Fluxo muito acima do padrão na área externa.</p>
+              <div class="hero-foot">
+                <div><span>Registrado</span><b>14,2 L</b></div>
+                <div><span>Duração</span><b>51 min</b></div>
+                <div><span>Local</span><b>Externa</b></div>
+              </div>
+            </section>
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6" />
+                  <path d="M10 21.5h4" />
+                  <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+                </svg> O que fazer agora</span>
+              <p>Feche o registro geral da residência e verifique a área externa. Se não encontrar a origem, acione um
+                profissional.</p>
+            </div>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Possível vazamento crítico</b><span>acima de 10 L</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <section class="hero s-off" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#CBD5E1"></span>Leitura
+                  parcial</span><span class="hero-time">há 22 min</span></div>
+              <h2>Não conseguimos avaliar tudo</h2>
+              <p>2 de 6 sensores estão sem enviar dados.</p>
+              <div class="hero-foot">
+                <div><span>Fluxo parcial</span><b>1,1 L</b></div>
+                <div><span>Hoje</span><b>98 L</b></div>
+                <div><span>Este mês</span><b>3.136 L</b></div>
+              </div>
+            </section>
+            <div class="banner off" style="margin-top:14px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M2 2l20 20" />
+                <path d="M5 12.5a10 10 0 0 1 4-2.4" />
+                <path d="M8.8 16.3a5 5 0 0 1 6.4 0" />
+                <path d="M12 20h.01" />
+                <path d="M15.5 10.6a10 10 0 0 1 3.5 1.9" />
+              </svg>
+              <div><b>1 sensor sem dados</b>
+                <p>A caixa d'água não envia leitura desde 11:40 e não está sendo considerada no status.</p>
+              </div>
+            </div>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Sensor indisponível</b><span>ausência de dados nunca é verde</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <div class="banner high" style="margin-bottom:14px"><svg width="19" height="19" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M2 2l20 20" />
+                <path d="M5 12.5a10 10 0 0 1 4-2.4" />
+                <path d="M8.8 16.3a5 5 0 0 1 6.4 0" />
+                <path d="M12 20h.01" />
+                <path d="M15.5 10.6a10 10 0 0 1 3.5 1.9" />
+              </svg>
+              <div><b>Sem conexão</b>
+                <p>Não foi possível atualizar os dados. Exibindo a última leitura recebida.</p>
+              </div>
+            </div>
+            <section class="hero s-off" data-od-id="hero-status"><svg class="wave" viewBox="0 0 340 58"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
+              </svg>
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#CBD5E1"></span>Dados
+                  desatualizados</span><span class="hero-time">11:40</span></div>
+              <h2>Última leitura às 11:40</h2>
+              <p>O app não conseguiu se conectar ao sistema.</p>
+              <div class="hero-foot">
+                <div><span>Fluxo parcial</span><b>1,1 L</b></div>
+                <div><span>Hoje</span><b>98 L</b></div>
+                <div><span>Este mês</span><b>3.136 L</b></div>
+              </div>
+            </section><button class="btn btn-outline" style="margin-top:14px">Tentar novamente</button>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Sem conexão</b><span>estado de erro com ação de recuperação</span></p>
+      </div>
+      <div class="gal-item">
+        <div class="app">
+          <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+                fill="currentColor" aria-hidden="true">
+                <rect x="0" y="7" width="3" height="4" rx="1" />
+                <rect x="4.5" y="5" width="3" height="6" rx="1" />
+                <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+                <rect x="13.5" y="0" width="3" height="11" rx="1" />
+              </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M1 4a9 9 0 0 1 13 0" />
+                <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+                <path d="M7.5 9.4h.01" />
+              </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+                <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+                <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+                <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+              </svg></span></div>
+          <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg></span><span class="iconbtn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg></span></header>
+          <div class="scroll">
+            <div class="sk" style="height:186px;border-radius:20px"></div>
+            <div class="sk" style="height:64px;border-radius:12px;margin-top:14px"></div>
+            <div class="sk" style="height:13px;width:44%;margin:26px 0 14px"></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:58%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:38%"></div>
+              </div>
+              <div class="sk" style="width:44px;height:12px"></div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:46%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:44%"></div>
+              </div>
+              <div class="sk" style="width:44px;height:12px"></div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:64%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:34%"></div>
+              </div>
+              <div class="sk" style="width:44px;height:12px"></div>
+            </div>
+          </div>
+          <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
+              aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M3 10.5 12 3l9 7.5" />
+                <path d="M5 9.5V21h14V9.5" />
+              </svg><span>Início</span></a><a href="consumo.html" data-od-id="tab-chart"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 20h18" />
+                <path d="M6.5 20v-6" />
+                <path d="M11.5 20V7" />
+                <path d="M16.5 20v-4" />
+                <path d="M21 20V11" />
+              </svg><span>Consumo</span></a><a href="alertas.html" data-od-id="tab-bell"><span class="nb">3</span><svg
+                width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
+                <path d="M10.3 21a2 2 0 0 0 3.4 0" />
+              </svg><span>Alertas</span></a><a href="sensores.html" data-od-id="tab-sensor"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2" />
+                <path d="M8.5 15.5a5 5 0 0 1 0-7" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                <path d="M5.5 18.5a9 9 0 0 1 0-13" />
+                <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg><span>Sensores</span></a><a href="perfil.html" data-od-id="tab-user"><svg width="21" height="21"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg><span>Perfil</span></a></nav>
+        </div>
+        <p class="cap"><b>Carregando</b><span>skeleton, nunca spinner em tela cheia</span></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

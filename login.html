@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AQUASENSE — Entrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
+</head>
+
+<body>
+  <div class="app " data-od-id="app">
+    <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+          fill="currentColor" aria-hidden="true">
+          <rect x="0" y="7" width="3" height="4" rx="1" />
+          <rect x="4.5" y="5" width="3" height="6" rx="1" />
+          <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+          <rect x="13.5" y="0" width="3" height="11" rx="1" />
+        </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M1 4a9 9 0 0 1 13 0" />
+          <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+          <path d="M7.5 9.4h.01" />
+        </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+          <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+          <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+          <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+        </svg></span></div>
+    <div class="scroll" style="padding-top:14px" data-od-id="login">
+      <div class="auth-head">
+        <img src="img/VARIAC_A_O-2---AQUASENSE.png" alt="AQUASENSE">
+        <h1>Bem-vindo de volta</h1>
+        <p>Acompanhe a água da sua casa em tempo real.</p>
+      </div>
+
+      <form id="f" novalidate>
+        <div class="field">
+          <label for="user">E-mail ou CPF</label>
+          <input class="input" id="user" name="user" type="text" inputmode="email" placeholder="voce@email.com"
+            autocomplete="username">
+          <p class="err" id="e-user" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 8v5" />
+              <path d="M12 16h.01" />
+            </svg> Informe seu e-mail ou CPF.</p>
+        </div>
+        <div class="field">
+          <label for="pwd">Senha</label>
+          <div style="position:relative">
+            <input class="input" id="pwd" name="pwd" type="password" placeholder="Sua senha"
+              autocomplete="current-password" style="padding-right:52px">
+            <button type="button" class="iconbtn" id="toggle-pwd" aria-label="Mostrar senha" aria-pressed="false"
+              style="position:absolute;right:4px;top:4px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg></button>
+          </div>
+          <p class="err" id="e-pwd" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 8v5" />
+              <path d="M12 16h.01" />
+            </svg> A senha precisa ter ao menos 8 caracteres.</p>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;margin:-4px 0 20px">
+          <a href="#" style="font-size:13px;font-weight:600;color:var(--sky-ink);text-decoration:none">Esqueci minha
+            senha</a>
+        </div>
+
+        <button class="btn btn-primary" type="submit" data-od-id="cta-entrar">Entrar</button>
+      </form>
+
+      <p class="auth-foot">Ainda não tem conta? <a href="cadastro.html">Criar conta</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
