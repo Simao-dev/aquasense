@@ -10,8 +10,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/aquasense.css">
-  <script src="assets/aquasense.js" defer></script>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/pages/perfil.css">
+  <script src="assets/js/global.js" defer></script>
+  <script src="assets/js/pages/perfil.js" defer></script>
 </head>
 
 <body>
@@ -37,14 +39,12 @@
     </header>
     <div class="scroll" data-od-id="perfil">
 
-      <section class="card" style="display:flex;align-items:center;gap:14px" data-od-id="cartao-usuario">
-        <span
-          style="width:56px;height:56px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:19px;font-weight:650;flex:none">BN</span>
-        <span style="flex:1;min-width:0">
-          <b style="display:block;font-family:var(--display);font-size:17px;font-weight:650">Barbara Figueiredo</b>
-          <span
-            style="display:block;font-size:12.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">barbara@email.com</span>
-          <span style="display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);margin-top:3px"><svg
+      <section class="card profile-card" data-od-id="cartao-usuario">
+        <span class="profile-avatar">BN</span>
+        <span class="profile-info">
+          <b class="profile-name">Barbara Figueiredo</b>
+          <span class="profile-email">barbara@email.com</span>
+          <span class="profile-meta"><svg
               width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z" />
@@ -103,7 +103,7 @@
               segundas</span></span><button class="toggle" role="switch" aria-checked="true" id="tg4"
             aria-label="Resumo semanal"></button></div>
       </div>
-      <p style="font-size:11.5px;color:var(--muted);margin:10px 2px 0;line-height:1.45">
+      <p class="profile-note">
         Alertas de possível vazamento crítico são sempre enviados, mesmo com as notificações desligadas.</p>
 
       <div class="sec-head">
@@ -178,14 +178,14 @@
               <path d="M9 6l6 6-6 6" />
             </svg></span></a></div>
 
-      <button class="btn btn-ghost" id="logout" type="button" style="margin-top:22px;color:var(--high-ink)"><svg
+      <button class="btn btn-ghost btn-logout" id="logout" type="button"><svg
           width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3" />
           <path d="M10 17l-5-5 5-5" />
           <path d="M5 12h11" />
         </svg> Sair da conta</button>
-      <p style="text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin:14px 0 0">AQUASENSE
+      <p class="profile-version">AQUASENSE
         1.0.0</p>
     </div>
 

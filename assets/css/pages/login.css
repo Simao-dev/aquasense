@@ -1,0 +1,32 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Login (login.html)
+   ========================================================================= */
+
+.login-scroll {
+  padding-top: 14px;
+}
+.password-field {
+  position: relative;
+}
+.password-field .input {
+  padding-right: 52px;
+}
+.password-toggle {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+.login-forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin: -4px 0 20px;
+}
+.auth-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sky-ink);
+  text-decoration: none;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}

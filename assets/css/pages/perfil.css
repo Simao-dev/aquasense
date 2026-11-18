@@ -1,0 +1,65 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Perfil (perfil.html)
+   ========================================================================= */
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--deep);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 650;
+  flex: none;
+}
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+.profile-name {
+  display: block;
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 650;
+}
+.profile-email {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.profile-note {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: 10px 2px 0;
+  line-height: 1.45;
+}
+.btn-logout {
+  margin-top: 22px;
+  color: var(--high-ink);
+}
+.profile-version {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  margin: 14px 0 0;
+}

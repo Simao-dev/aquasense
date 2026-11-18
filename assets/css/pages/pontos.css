@@ -1,0 +1,13 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Pontos de Consumo (pontos.html)
+   ========================================================================= */
+
+.pontos-list-wrap {
+  margin-top: 16px;
+}
+.pontos-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 10px 2px 0;
+  line-height: 1.45;
+}

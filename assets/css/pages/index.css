@@ -1,0 +1,19 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Launcher (index.html)
+   ========================================================================= */
+
+/* ================= Launcher (index) ================= */
+body.launcher{display:block;background:#0C2233;padding:0}
+.lx{max-width:1240px;margin:0 auto;padding:56px 32px 96px;color:#EAF4F9}
+.lx-head img{width:230px;margin-bottom:24px}
+.lx-head h1{font-family:var(--display);font-size:34px;font-weight:700;letter-spacing:-.02em;margin:0 0 10px;color:#fff}
+.lx-head p{margin:0;max-width:64ch;color:#9FBCCD;font-size:15.5px;line-height:1.6}
+.lx-group{margin-top:52px}
+.lx-group > .eyebrow{color:#6E93A8;display:block;margin-bottom:16px}
+.lx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:16px}
+.lx-card{display:block;text-decoration:none;background:#123048;border:1px solid #1E4360;border-radius:var(--r-lg);padding:18px;transition:border-color .15s,background .15s,transform .15s}
+.lx-card:hover{background:#163955;border-color:var(--cyan);transform:translateY(-2px)}
+.lx-card .n{font-family:var(--mono);font-size:10.5px;color:#6E93A8;letter-spacing:.1em}
+.lx-card b{display:block;font-family:var(--display);font-size:16px;font-weight:600;color:#fff;margin:8px 0 5px}
+.lx-card p{margin:0;font-size:12.5px;color:#9FBCCD;line-height:1.5}
+.lx-card .us{display:inline-block;margin-top:11px;font-family:var(--mono);font-size:9.5px;color:var(--cyan);letter-spacing:.06em}

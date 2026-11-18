@@ -1,0 +1,80 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Galeria de Estados (inicio-estados.html)
+   ========================================================================= */
+
+/* ================= Galeria de Estados ================= */
+body.gal{display:block;background:#0C2233;padding:0}
+.gal{max-width:1460px;margin:0 auto;padding:52px 34px 90px;color:#EAF4F9}
+.gal h1{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.02em;margin:0 0 10px;color:#fff}
+.gal > p{margin:0 0 42px;max-width:66ch;color:#9FBCCD;font-size:15px;line-height:1.6}
+.gal-grid{display:flex;flex-wrap:wrap;gap:26px}
+.gal-item{flex:none}
+.gal-item .cap{margin:14px 0 0;text-align:center}
+.gal-item .cap b{display:block;font-family:var(--display);font-size:14px;font-weight:600;color:#fff}
+.gal-item .cap span{display:block;font-family:var(--mono);font-size:10px;color:#6E93A8;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.gal-back{display:inline-flex;align-items:center;gap:7px;color:#9FBCCD;text-decoration:none;font-size:13px;font-weight:600;margin-bottom:26px}
+.gal-back:hover{color:var(--cyan)}
+
+
+/* Estados e mockups da galeria */
+.estado-summary-link {
+  margin-top: 14px;
+  display: flex;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  align-items: stretch;
+}
+.hero-dot-ok { background: #4ADE80; }
+.hero-dot-low { background: #FDE68A; }
+.hero-dot-mid { background: #FDBA74; }
+.hero-dot-high { background: #FCA5A5; }
+.hero-dot-off { background: #CBD5E1; }
+
+.sk-hero {
+  height: 186px;
+  border-radius: 20px;
+}
+.sk-bar {
+  height: 64px;
+  border-radius: 12px;
+  margin-top: 14px;
+}
+.sk-title {
+  height: 13px;
+  width: 44%;
+  margin: 26px 0 14px;
+}
+.sk-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+}
+.sk-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  flex: none;
+}
+.sk-badge {
+  width: 44px;
+  height: 12px;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.sk-line-58 { height: 11px; width: 58%; margin-bottom: 7px; }
+.sk-line-38 { height: 10px; width: 38%; }
+.sk-line-46 { height: 11px; width: 46%; margin-bottom: 7px; }
+.sk-line-44 { height: 10px; width: 44%; }
+.sk-line-64 { height: 11px; width: 64%; margin-bottom: 7px; }
+.sk-line-34 { height: 10px; width: 34%; }
+
+.text-ok { color: var(--ok-ink); }
+.text-low { color: var(--low-ink); }
+.text-off { color: var(--off-ink); }

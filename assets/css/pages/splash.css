@@ -1,0 +1,20 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Splash (splash.html)
+   ========================================================================= */
+
+/* ================= Splash ================= */
+.splash{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:0 32px}
+.splash .mark{width:190px;margin-bottom:18px;position:relative;z-index:2}
+.splash .tag{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72);position:relative;z-index:2;text-align:center}
+.splash .sea{position:absolute;left:0;right:0;bottom:0;height:36%;z-index:1}
+.splash .load{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);width:120px;height:3px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden;z-index:2}
+.splash .load i{display:block;height:100%;width:40%;background:var(--cyan);border-radius:2px;animation:ld 1.5s ease-in-out infinite}
+@keyframes ld{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+@media (prefers-reduced-motion:reduce){.splash .load i{animation:none;width:70%}}
+
+.splash .sea {
+  width: 100%;
+}
+.splash .mark {
+  filter: brightness(0) invert(1);
+}

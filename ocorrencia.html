@@ -1,84 +1,174 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AQUASENSE — Ocorrência</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/aquasense.css">
-<script src="assets/aquasense.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AQUASENSE — Ocorrência</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/pages/ocorrencia.css">
+  <script src="assets/js/global.js" defer></script>
+  <script src="assets/js/pages/ocorrencia.js" defer></script>
 </head>
+
 <body>
-<div class="app " data-od-id="app"><div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M1 4a9 9 0 0 1 13 0"/><path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0"/><path d="M7.5 9.4h.01"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true"><rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45"/><rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor"/><path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5"/></svg></span></div><header class="appbar" data-od-id="appbar"><a class="iconbtn" href="inicio.html" aria-label="Voltar"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></a><h1>Ocorrência</h1></header>
-<div class="scroll" data-od-id="ocorrencia">
+  <div class="app " data-od-id="app">
+    <div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11"
+          fill="currentColor" aria-hidden="true">
+          <rect x="0" y="7" width="3" height="4" rx="1" />
+          <rect x="4.5" y="5" width="3" height="6" rx="1" />
+          <rect x="9" y="2.5" width="3" height="8.5" rx="1" />
+          <rect x="13.5" y="0" width="3" height="11" rx="1" />
+        </svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M1 4a9 9 0 0 1 13 0" />
+          <path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0" />
+          <path d="M7.5 9.4h.01" />
+        </svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true">
+          <rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45" />
+          <rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor" />
+          <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
+        </svg></span></div>
+    <header class="appbar" data-od-id="appbar"><a class="iconbtn" href="inicio.html" aria-label="Voltar"><svg width="21"
+          height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg></a>
+      <h1>Ocorrência</h1>
+    </header>
+    <div class="scroll" data-od-id="ocorrencia">
 
-  <section class="card" style="background:var(--mid-bg);border-color:#F6C79B" data-od-id="cabecalho-ocorrencia">
-    <span class="badge mid"><span class="dot"></span>Possível vazamento moderado</span>
-    <div class="big" style="color:var(--mid-ink);margin:14px 0 2px">7,4<span class="u" style="color:var(--mid-ink);opacity:.7">L</span></div>
-    <p style="margin:0;font-size:13.5px;color:var(--mid-ink)">registrados no <b>banheiro</b> em 28 minutos</p>
-  </section>
+      <section class="card ocorrencia-hero-card" data-od-id="cabecalho-ocorrencia">
+        <span class="badge mid"><span class="dot"></span>Possível vazamento moderado</span>
+        <div class="big ocorrencia-big-val">7,4<span class="u ocorrencia-unit">L</span></div>
+        <p class="ocorrencia-status-text">registrados no <b>banheiro</b> em 28 minutos</p>
+      </section>
 
-  <div style="margin-top:14px"><div class="card" data-od-id="faixa-referencia">
-  <span class="eyebrow">Faixas de referência</span>
-  <div class="marker"><i style="left:68%"></i></div>
-  <div class="scale" role="img" aria-label="Fluxo de 7,4 litros na faixa de possível vazamento moderado">
-    <i style="width:20%;background:var(--ok)"></i><i style="width:30%;background:var(--low)"></i>
-    <i style="width:30%;background:var(--mid)"></i><i style="width:20%;background:var(--high)"></i>
-  </div>
-  <div class="scale-x"><span>0 L</span><span>2 L</span><span>5 L</span><span>10 L</span><span>+</span></div>
-  <p style="margin:12px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.45">
-    O valor registrado está na terceira faixa. O sistema identifica padrões de fluxo — ele não confirma vazamento.</p>
-</div></div>
+      <div class="gauge-wrap">
+        <div class="card" data-od-id="faixa-referencia">
+          <span class="eyebrow">Faixas de referência</span>
+          <div class="marker"><i style="left:68%"></i></div>
+          <div class="scale" role="img" aria-label="Fluxo de 7,4 litros na faixa de possível vazamento moderado">
+            <i class="scale-ok"></i><i class="scale-low"></i>
+            <i class="scale-mid"></i><i class="scale-high"></i>
+          </div>
+          <div class="scale-x"><span>0 L</span><span>2 L</span><span>5 L</span><span>10 L</span><span>+</span></div>
+          <p class="ocorrencia-range-note">
+            O valor registrado está na terceira faixa. O sistema identifica padrões de fluxo — ele não confirma
+            vazamento.</p>
+        </div>
+      </div>
 
-  <div class="sec-head"><h2>Detalhes</h2></div>
-  <dl class="dl" data-od-id="detalhes"><div><dt>Classificação</dt><dd><span class="badge mid"><span class="dot"></span>Moderado</span></dd></div><div><dt>Fluxo registrado</dt><dd><span class="num">7,4 L</span></dd></div><div><dt>Local provável</dt><dd>Banheiro</dd></div><div><dt>Sensor responsável</dt><dd>Sensor 03 · Banheiro</dd></div><div><dt>Data</dt><dd>24 de agosto de 2026</dd></div><div><dt>Horário de início</dt><dd><span class="num">13:24</span></dd></div><div><dt>Duração</dt><dd><span class="num">28 min</span></dd></div><div><dt>Status</dt><dd><span class="badge mid"><span class="dot"></span>Em aberto</span></dd></div></dl>
+      <div class="sec-head">
+        <h2>Detalhes</h2>
+      </div>
+      <dl class="dl" data-od-id="detalhes">
+        <div>
+          <dt>Classificação</dt>
+          <dd><span class="badge mid"><span class="dot"></span>Moderado</span></dd>
+        </div>
+        <div>
+          <dt>Fluxo registrado</dt>
+          <dd><span class="num">7,4 L</span></dd>
+        </div>
+        <div>
+          <dt>Local provável</dt>
+          <dd>Banheiro</dd>
+        </div>
+        <div>
+          <dt>Sensor responsável</dt>
+          <dd>Sensor 03 · Banheiro</dd>
+        </div>
+        <div>
+          <dt>Data</dt>
+          <dd>24 de agosto de 2026</dd>
+        </div>
+        <div>
+          <dt>Horário de início</dt>
+          <dd><span class="num">13:24</span></dd>
+        </div>
+        <div>
+          <dt>Duração</dt>
+          <dd><span class="num">28 min</span></dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd><span class="badge mid"><span class="dot"></span>Em aberto</span></dd>
+        </div>
+      </dl>
 
-  <div class="sec-head"><h2>Orientação</h2></div>
-  <div class="guide" data-od-id="orientacao">
-  <span class="eyebrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21.5h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg> O que fazer agora</span>
-  <p>Verifique <b>torneiras, chuveiro e descarga</b> do banheiro, nesta ordem. A descarga com boia desregulada é a causa mais comum nessa faixa de fluxo.</p>
-  <p>Se todos estiverem fechados, feche o registro do banheiro e acompanhe se o fluxo cai nos próximos minutos.</p>
-</div>
+      <div class="sec-head">
+        <h2>Orientação</h2>
+      </div>
+      <div class="guide" data-od-id="orientacao">
+        <span class="eyebrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18h6" />
+            <path d="M10 21.5h4" />
+            <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+          </svg> O que fazer agora</span>
+        <p>Verifique <b>torneiras, chuveiro e descarga</b> do banheiro, nesta ordem. A descarga com boia desregulada é a
+          causa mais comum nessa faixa de fluxo.</p>
+        <p>Se todos estiverem fechados, feche o registro do banheiro e acompanhe se o fluxo cai nos próximos minutos.
+        </p>
+      </div>
 
-  <div class="sec-head"><h2>Histórico deste ponto</h2><a href="ponto-detalhe.html">Abrir ponto</a></div>
-  <div class="card" data-od-id="historico-ponto">
-  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px">
-    <span class="eyebrow">Este ponto · últimos 7 dias</span>
-    <span class="num" style="font-size:13px;font-weight:650">média 42 L</span>
-  </div>
-  <div class="bars"><div class="b " style="height:34%"><i style="height:100%"></i></div><div class="b " style="height:46%"><i style="height:100%"></i></div><div class="b " style="height:38%"><i style="height:100%"></i></div><div class="b " style="height:52%"><i style="height:100%"></i></div><div class="b " style="height:41%"><i style="height:100%"></i></div><div class="b " style="height:48%"><i style="height:100%"></i></div><div class="b mid" style="height:100%"><i style="height:100%"></i></div></div>
-  <div class="chart-x"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
-</div>
+      <div class="sec-head">
+        <h2>Histórico deste ponto</h2><a href="ponto-detalhe.html">Abrir ponto</a>
+      </div>
+      <div class="card" data-od-id="historico-ponto">
+        <div class="chart-header">
+          <span class="eyebrow">Este ponto · últimos 7 dias</span>
+          <span class="num chart-date-badge">média 42 L</span>
+        </div>
+        <div class="bars">
+          <div class="b " style="height:34%"><i></i></div>
+          <div class="b " style="height:46%"><i></i></div>
+          <div class="b " style="height:38%"><i></i></div>
+          <div class="b " style="height:52%"><i></i></div>
+          <div class="b " style="height:41%"><i></i></div>
+          <div class="b " style="height:48%"><i></i></div>
+          <div class="b mid" style="height:100%"><i></i></div>
+        </div>
+        <div class="chart-x">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+        </div>
+      </div>
 
-  <div class="stack" style="margin-top:22px">
-    <button class="btn btn-primary" id="open-check" type="button" data-od-id="cta-verificar">Verificar ocorrência</button>
-    <button class="btn btn-ghost" type="button" id="ignore">Ignorar esta ocorrência</button>
-  </div>
-</div>
-
-<div class="dialog" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t" data-od-id="dialogo-verificar">
-  <div class="box">
-    <h3 id="dlg-t">O que você encontrou?</h3>
-    <p>Sua resposta ajuda o sistema a calibrar as faixas da sua residência.</p>
-    <div class="stack" style="margin-bottom:20px">
-      <label class="row" style="border:1px solid var(--border);border-radius:12px;padding:12px;min-height:0;cursor:pointer">
-        <input type="radio" name="res" value="fixed" checked style="accent-color:var(--sky);width:18px;height:18px;flex:none">
-        <span class="txt"><b style="white-space:normal">Encontrei e resolvi</b></span></label>
-      <label class="row" style="border:1px solid var(--border);border-radius:12px;padding:12px;min-height:0;cursor:pointer">
-        <input type="radio" name="res" value="none" style="accent-color:var(--sky);width:18px;height:18px;flex:none">
-        <span class="txt"><b style="white-space:normal">Verifiquei e está tudo fechado</b></span></label>
-      <label class="row" style="border:1px solid var(--border);border-radius:12px;padding:12px;min-height:0;cursor:pointer">
-        <input type="radio" name="res" value="pro" style="accent-color:var(--sky);width:18px;height:18px;flex:none">
-        <span class="txt"><b style="white-space:normal">Vou chamar um profissional</b></span></label>
+      <div class="stack stack-top-22">
+        <button class="btn btn-primary" id="open-check" type="button" data-od-id="cta-verificar">Verificar
+          ocorrência</button>
+        <button class="btn btn-ghost" type="button" id="ignore">Ignorar esta ocorrência</button>
+      </div>
     </div>
-    <div class="btn-row">
-      <button class="btn btn-outline" id="dlg-cancel" type="button">Cancelar</button>
-      <button class="btn btn-primary" id="dlg-ok" type="button">Confirmar</button>
+
+    <div class="dialog" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t" data-od-id="dialogo-verificar">
+      <div class="box">
+        <h3 id="dlg-t">O que você encontrou?</h3>
+        <p>Sua resposta ajuda o sistema a calibrar as faixas da sua residência.</p>
+        <div class="stack stack-actions">
+          <label class="row action-radio-option">
+            <input type="radio" class="action-radio-input" name="res" value="fixed" checked>
+            <span class="txt"><b class="action-radio-label">Encontrei e resolvi</b></span></label>
+          <label class="row action-radio-option">
+            <input type="radio" class="action-radio-input" name="res" value="none">
+            <span class="txt"><b class="action-radio-label">Verifiquei e está tudo fechado</b></span></label>
+          <label class="row action-radio-option">
+            <input type="radio" class="action-radio-input" name="res" value="pro">
+            <span class="txt"><b class="action-radio-label">Vou chamar um profissional</b></span></label>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-outline" id="dlg-cancel" type="button">Cancelar</button>
+          <button class="btn btn-primary" id="dlg-ok" type="button">Confirmar</button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </body>
+
 </html>

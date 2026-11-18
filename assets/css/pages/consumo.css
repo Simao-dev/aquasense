@@ -1,0 +1,34 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Consumo (consumo.html)
+   ========================================================================= */
+
+.consumo-chart-card {
+  margin-top: 14px;
+}
+.chart-total-val {
+  margin-top: 4px;
+}
+.consumo-legend {
+  margin: 14px 0 0;
+  font-size: 11.5px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot-indicador {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: var(--mid);
+  display: inline-block;
+}
+.val-destaque-mid {
+  color: var(--mid-ink);
+}
+.consumo-footer-note {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: 10px 2px 0;
+  line-height: 1.45;
+}

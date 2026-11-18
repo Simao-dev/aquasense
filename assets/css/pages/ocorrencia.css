@@ -1,0 +1,72 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Detalhe da Ocorrência (ocorrencia.html)
+   ========================================================================= */
+
+.ocorrencia-hero-card {
+  background: var(--mid-bg);
+  border-color: #F6C79B;
+}
+.ocorrencia-big-val {
+  color: var(--mid-ink);
+  margin: 14px 0 2px;
+}
+.ocorrencia-unit {
+  color: var(--mid-ink);
+  opacity: .7;
+}
+.ocorrencia-status-text {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--mid-ink);
+}
+.gauge-wrap {
+  margin-top: 14px;
+}
+.scale-ok {
+  width: 20%;
+  background: var(--ok);
+}
+.scale-low {
+  width: 30%;
+  background: var(--low);
+}
+.scale-mid {
+  width: 30%;
+  background: var(--mid);
+}
+.scale-high {
+  width: 20%;
+  background: var(--high);
+}
+.ocorrencia-range-note {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.chart-date-badge {
+  font-size: 13px;
+  font-weight: 650;
+}
+.stack-top-22 {
+  margin-top: 22px;
+}
+.stack-actions {
+  margin-bottom: 20px;
+}
+.action-radio-option {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 0;
+  cursor: pointer;
+}
+.action-radio-input {
+  accent-color: var(--sky);
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+.action-radio-label {
+  white-space: normal;
+}

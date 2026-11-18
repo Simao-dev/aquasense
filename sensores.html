@@ -10,9 +10,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/aquasense.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/pages/sensores.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.15.2/mqtt.min.js"></script>
-  <script src="assets/aquasense.js" defer></script>
+  <script src="assets/js/global.js" defer></script>
+  <script src="assets/js/pages/sensores.js" defer></script>
 </head>
 
 <body>
@@ -43,21 +45,15 @@
     </header>
     <div class="scroll" data-od-id="sensores">
 
-      <section class="card" data-od-id="resumo-estados" style="display:flex;gap:6px;align-items:stretch">
-        <div style="flex:1;text-align:center"><b id="resFuncionando"
-            style="font-family:var(--display);font-size:24px;font-weight:700;display:block;color:var(--muted)">0</b><span
-            style="font-size:11px;color:var(--muted);font-weight:600">Funcionando</span></div>
-        <div style="width:1px;background:var(--border)"></div>
-        <div style="flex:1;text-align:center"><b id="resAtencao"
-            style="font-family:var(--display);font-size:24px;font-weight:700;display:block;color:var(--muted)">0</b><span
-            style="font-size:11px;color:var(--muted);font-weight:600">Atenção</span></div>
-        <div style="width:1px;background:var(--border)"></div>
-        <div style="flex:1;text-align:center"><b id="resIndisponivel"
-            style="font-family:var(--display);font-size:24px;font-weight:700;display:block;color:var(--muted)">0</b><span
-            style="font-size:11px;color:var(--muted);font-weight:600">Indisponível</span></div>
+      <section class="card status-summary sensores-summary" data-od-id="resumo-estados">
+        <div class="status-summary-col"><b class="status-summary-num" id="resFuncionando">0</b><span class="status-summary-label">Funcionando</span></div>
+        <div class="status-summary-divider"></div>
+        <div class="status-summary-col"><b class="status-summary-num" id="resAtencao">0</b><span class="status-summary-label">Atenção</span></div>
+        <div class="status-summary-divider"></div>
+        <div class="status-summary-col"><b class="status-summary-num" id="resIndisponivel">0</b><span class="status-summary-label">Indisponível</span></div>
       </section>
 
-      <div class="banner off" id="bannerIndisponivel" style="margin-top:14px;display:none"
+      <div class="banner off banner-indisponivel" id="bannerIndisponivel"
         data-od-id="aviso-indisponivel">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

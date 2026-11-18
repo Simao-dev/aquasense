@@ -7,8 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/aquasense.css">
-<script src="assets/aquasense.js" defer></script>
+<link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/pages/cadastro.css">
+<script src="assets/js/global.js" defer></script>
+<script src="assets/js/pages/cadastro.js" defer></script>
 </head>
 <body>
 <div class="app " data-od-id="app"><div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M1 4a9 9 0 0 1 13 0"/><path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0"/><path d="M7.5 9.4h.01"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true"><rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45"/><rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor"/><path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5"/></svg></span></div>
@@ -20,7 +22,7 @@
   <div class="steps" aria-label="Etapa 1 de 2"><i class="on"></i><i id="s2"></i></div>
 
   <section id="step1">
-    <div class="auth-head" style="padding-bottom:14px">
+    <div class="auth-head auth-head-compact">
       <h1>Seus dados</h1>
       <p>Passo 1 de 2 — informe seu nome, contato e escolha uma senha segura.</p>
     </div>
@@ -28,11 +30,11 @@
     <div class="field"><label for="cpf">CPF</label><input class="input" id="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00"></div>
     <div class="field"><label for="email">E-mail</label><input class="input" id="email" type="email" placeholder="voce@email.com" autocomplete="email"></div>
     <div class="field"><label for="pass">Senha</label><input class="input" id="pass" type="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password"></div>
-    <button class="btn btn-primary" id="next" type="button" style="margin-top:10px">Próxima etapa</button>
+    <button class="btn btn-primary btn-step-next" id="next" type="button">Próxima etapa</button>
   </section>
 
   <section id="step2" hidden>
-    <div class="auth-head" style="padding-bottom:14px">
+    <div class="auth-head auth-head-compact">
       <h1>Sua residência</h1>
       <p>Passo 2 de 2 — endereço onde o sensor ESP32 fará o monitoramento.</p>
     </div>
@@ -43,7 +45,7 @@
       <div class="field"><label for="uf">Estado</label><select class="input" id="uf"><option selected>CE</option><option>BA</option><option>MG</option><option>PR</option><option>RJ</option><option>RS</option><option>SP</option></select></div>
     </div>
     <div class="field"><label for="tipo">Tipo de residência</label><select class="input" id="tipo"><option>Casa</option><option>Apartamento</option><option>Sobrado</option><option>Chácara</option></select></div>
-    <div class="banner off" style="margin:18px 0 22px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><div><b>Instalação dos sensores</b><p>Após o cadastro você recebe as instruções para parear os sensores já instalados na sua rede hidráulica.</p></div></div>
+    <div class="banner off banner-cadastro"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><div><b>Instalação dos sensores</b><p>Após o cadastro você recebe as instruções para parear os sensores já instalados na sua rede hidráulica.</p></div></div>
     <div class="btn-row">
       <button class="btn btn-outline" id="back2" type="button">Voltar</button>
       <button class="btn btn-primary" id="create" type="button">Criar conta</button>

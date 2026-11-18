@@ -1,0 +1,143 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Design System (design-system.html)
+   ========================================================================= */
+
+/* ================= Design System Showcase & Figma Handoff ================= */
+.shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh;background:var(--bg)}
+.side{position:sticky;top:0;height:100vh;background:var(--surface);border-right:1px solid var(--border);padding:24px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:20px}
+.side .brand{height:26px;width:auto}
+.side nav{display:flex;flex-direction:column;gap:4px}
+.side nav a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--r-md);color:var(--ink-2);text-decoration:none;font-size:13.5px;font-weight:550;transition:background .15s,color .15s}
+.side nav a:hover,.side nav a.active{background:var(--deep-100);color:var(--deep);font-weight:600}
+.main{padding:48px 40px 96px;max-width:1040px}
+.main section{margin-bottom:56px}
+.main section > h2{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:-.015em;margin:0 0 8px;color:var(--ink)}
+.main section > p.desc{margin:0 0 24px;color:var(--ink-2);font-size:14.5px;line-height:1.6;max-width:72ch}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dd .box{border:1px solid var(--border);border-radius:var(--r-md);padding:16px;background:var(--surface)}
+.dd .box.no{border-color:#F0B4AF;background:var(--high-bg)}
+.dd .box.yes{border-color:#A9DFC0;background:var(--ok-bg)}
+.dd .box span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.dd .box.no span{color:var(--high-ink)}
+.dd .box.yes span{color:var(--ok-ink)}
+.dd .box p{margin:0 0 6px;font-size:13.5px}
+.dd .box p:last-child{margin-bottom:0}
+
+/* Amostras de cores */
+.sw-deep { background: #1C4F73; }
+.sw-cyan { background: #27B9CB; }
+.sw-sky { background: #26A9E1; }
+.sw-sky-light { background: #E5F5FC; }
+.sw-sky-pale { background: #F1F8FB; }
+.sw-white { background: #FFFFFF; box-shadow: inset 0 0 0 1px #DCE8EF; }
+.sw-border { background: #DCE8EF; }
+.sw-mid-slate { background: #41637A; }
+.sw-dark-slate { background: #0F2A3D; }
+
+.sw-green { background: #17A34A; }
+.sw-yellow { background: #E0A413; }
+.sw-orange { background: #ED7014; }
+.sw-red { background: #D93B30; }
+.sw-gray { background: #7C8DA0; }
+
+.ds-chip-green { background: #17A34A; margin: 0; }
+.ds-chip-yellow { background: #E0A413; margin: 0; }
+.ds-chip-orange { background: #ED7014; margin: 0; }
+.ds-chip-red { background: #D93B30; margin: 0; }
+.ds-chip-gray { background: #7C8DA0; margin: 0; }
+
+/* Border radius samples */
+.r-box-8 { border-radius: 8px; }
+.r-box-12 { border-radius: 12px; }
+.r-box-16 { border-radius: 16px; }
+.r-box-20 { border-radius: 20px; }
+.r-box-pill { border-radius: 999px; }
+
+/* Spacing scale samples */
+.sp-w-4 { width: 4px; }
+.sp-w-8 { width: 8px; }
+.sp-w-12 { width: 12px; }
+.sp-w-16 { width: 16px; }
+.sp-w-20 { width: 20px; }
+.sp-w-24 { width: 24px; }
+.sp-w-32 { width: 32px; }
+
+/* Shadow samples */
+.shadow-sample-base {
+  width: 120px;
+  height: 38px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.shadow-sample-lift {
+  width: 120px;
+  height: 38px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lift);
+}
+
+/* Typography & Layout showcase helpers */
+.ds-flex-wrap-10 { display: flex; gap: 10px; flex-wrap: wrap; }
+.ds-flex-align-end { display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; }
+.ds-col-stack { max-width: 360px; display: flex; flex-direction: column; gap: 12px; }
+.ds-flex-gap-10 { display: flex; gap: 10px; }
+.ds-flex-between-pt4 { display: flex; align-items: center; justify-content: space-between; padding-top: 4px; }
+.ds-label-title { display: block; font-size: 12.5px; font-weight: 600; color: var(--ink-2); margin-bottom: 10px; }
+.ds-unit-muted { font-size: 18px; font-weight: 600; color: var(--muted); margin-left: 3px; }
+.ds-hero-sample-card { max-width: 560px; }
+.ds-hero-sample-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+.ds-phone-mockup { width: 380px; }
+
+.ds-sk-hero { height: 88px; border-radius: 14px; margin-bottom: 14px; }
+.ds-sk-line-70 { height: 13px; width: 70%; margin-bottom: 8px; }
+.ds-sk-line-45 { height: 13px; width: 45%; margin-bottom: 16px; }
+.ds-sk-row-mb { display: flex; gap: 11px; align-items: center; margin-bottom: 12px; }
+.ds-sk-row { display: flex; gap: 11px; align-items: center; }
+.ds-sk-box { width: 42px; height: 42px; border-radius: 12px; flex: none; }
+.ds-sk-line-62 { height: 11px; width: 62%; margin-bottom: 6px; }
+.ds-sk-line-40 { height: 10px; width: 40%; }
+.ds-sk-line-52 { height: 11px; width: 52%; margin-bottom: 6px; }
+.ds-sk-line-34 { height: 10px; width: 34%; }
+
+.ds-badge-off { background: var(--off-bg); color: var(--off-ink); }
+.ds-empty-btn { border: none; padding: 0; background: none; }
+.ds-caption-center { font-size: 12.5px; color: var(--muted); margin: 16px 0 0; text-align: center; }
+
+/* Dot colors in showcase */
+.ds-dot-green { background: #4ADE80; }
+.ds-dot-yellow { background: #FDBA74; }
+.ds-dot-red { background: #FCA5A5; }
+
+/* Utilities */
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mb-3 { margin-bottom: 3px; }
+.mb-4 { margin-bottom: 4px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-14 { margin-top: 14px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.pt-18 { padding-top: 18px; }
+.w-100 { width: 100%; }
+.fs-11-mono { font-size: 11px; opacity: .72; font-family: var(--mono); }
+.fs-12-muted { font-size: 12px; color: var(--muted); }
+.fs-125-muted { font-size: 12.5px; color: var(--muted); }
+.fs-14 { font-size: 14px; }
+.fs-15 { font-size: 15px; }
+.text-ink { color: var(--ink); }
+.text-muted { color: var(--muted); }
+.text-sky { color: var(--sky-ink); }
+.text-mid { color: var(--mid-ink); }
+.gap-12 { gap: 12px; }
+.ds-desc-lede { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+.ds-center-col-10 { display: flex; flex-direction: column; justify-content: center; gap: 10px; }

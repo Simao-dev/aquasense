@@ -1,0 +1,100 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Planos (planos.html)
+   ========================================================================= */
+
+/* ================= Planos ================= */
+#listaPlanos{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+
+/* Card de plano */
+.plan-card{position:relative;width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;text-align:left;cursor:pointer;transition:border-color .18s,box-shadow .18s,background .18s;overflow:hidden}
+.plan-card:hover{border-color:var(--sky);background:var(--sky-100)}
+.plan-card[aria-pressed="true"]{border-color:var(--deep);background:var(--deep-100);box-shadow:0 0 0 3px rgba(28,79,115,.12)}
+.plan-card[aria-pressed="true"]:hover{border-color:var(--deep-900)}
+
+/* Badge de destaque (ex: "Economize 17%", "Melhor custo-benefício") */
+.plan-card .tag{background:var(--cyan);color:#fff;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:var(--r-pill);white-space:nowrap}
+.plan-card[aria-pressed="true"] .tag{background:var(--deep)}
+
+/* Cabeçalho: nome + radio */
+.ph{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.ph .radio{margin-left:auto}
+.pn{font-family:var(--display);font-size:15px;font-weight:650;color:var(--ink)}
+
+/* Bolinha radio */
+.radio{width:18px;height:18px;border-radius:50%;border:2px solid var(--border-strong);background:var(--surface);flex:none;transition:border-color .15s,background .15s;display:grid;place-items:center}
+.plan-card[aria-pressed="true"] .radio{border-color:var(--deep);background:var(--deep)}
+.plan-card[aria-pressed="true"] .radio::after{content:"";width:7px;height:7px;border-radius:50%;background:#fff}
+
+/* Preço */
+.pp{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink);line-height:1.1;margin-bottom:4px}
+.pp .u{font-size:13px;font-weight:500;color:var(--muted);margin-left:2px;letter-spacing:0}
+.plan-card[aria-pressed="true"] .pp{color:var(--deep)}
+
+/* Descrição */
+.pc{margin:0;font-size:12px;color:var(--muted);line-height:1.45}
+.plan-card[aria-pressed="true"] .pc{color:var(--ink-2)}
+
+/* Lista de benefícios */
+.plan-benefits{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.plan-benefits li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13.5px;color:var(--ink-2)}
+.plan-benefits li:last-child{border-bottom:none}
+.plan-benefits li svg{flex:none;color:var(--ok-ink)}
+
+
+/* Planos: linha de economia separada do texto de preço */
+.plan-card .save{margin:6px 0 0;font-size:12px;font-weight:700;color:var(--ok-ink)}
+
+/* Pagamento (ilustrativo) */
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay-opt{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:12px 14px;cursor:pointer;color:var(--ink-2);transition:border-color .18s,box-shadow .18s,background .18s}
+.pay-opt:hover{border-color:var(--sky);background:var(--sky-100)}
+.pay-opt[aria-pressed="true"]{border-color:var(--deep);background:var(--deep-100);box-shadow:0 0 0 3px rgba(28,79,115,.12);color:var(--deep)}
+.pay-opt .radio{position:absolute;top:12px;right:12px}
+.pay-opt[aria-pressed="true"] .radio{border-color:var(--deep);background:var(--deep)}
+.pay-opt[aria-pressed="true"] .radio::after{content:"";width:7px;height:7px;border-radius:50%;background:#fff}
+.pay-opt .pay-ic{width:22px;height:22px;object-fit:contain;display:block}
+.pay-opt b{font-family:var(--display);font-size:13.5px;font-weight:650;color:var(--ink);margin-top:4px}
+.pay-opt small{font-size:11.5px;color:var(--muted);line-height:1.35}
+.pay-panel{margin-top:12px}
+.pay-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay-err{margin:8px 0 0;font-size:12px;font-weight:600;color:var(--high-ink)}
+.pay-err:empty{display:none}
+.pay-note{margin:0 0 12px;font-size:13px;color:var(--ink-2);line-height:1.5}
+.pay-panel .qr{display:block;width:150px;height:150px;margin:0 auto 12px;background:#fff;padding:8px;border-radius:var(--r-md);border:1px solid var(--border)}
+.pay-code{font-family:var(--mono);font-size:11px;line-height:1.5;word-break:break-all;background:var(--bg);border:1px dashed var(--border-strong);border-radius:var(--r-md);padding:10px 12px;color:var(--ink-2)}
+.sum{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:13.5px;color:var(--ink-2);border-bottom:1px solid var(--border)}
+.sum:first-child{padding-top:0}.sum:last-child{border-bottom:none;padding-bottom:0}
+.sum b{color:var(--ink);text-align:right}
+.sum.total b{font-family:var(--display);font-size:18px;color:var(--deep)}
+
+
+/* Detalhes específicos de apresentação dos planos */
+.planos-intro {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  margin: 2px 2px 18px;
+  line-height: 1.5;
+}
+.btn-assinar {
+  margin-top: 18px;
+}
+.planos-terms {
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+.dlg-success-box {
+  text-align: center;
+}
+.dlg-success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+}

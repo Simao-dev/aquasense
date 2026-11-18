@@ -1,0 +1,11 @@
+/* =========================================================================
+   AQUASENSE — Estilos da Página: Sensores (sensores.html)
+   ========================================================================= */
+
+.banner-indisponivel {
+  margin-top: 14px;
+  display: none;
+}
+.sensores-summary .status-summary-num {
+  font-size: 24px;
+}
