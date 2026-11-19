@@ -7,16 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/global.css">
-<link rel="stylesheet" href="assets/css/pages/residencia.css">
+<link rel="stylesheet" href="assets/aquasense.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.15.2/mqtt.min.js"></script>
-<script src="assets/js/global.js" defer></script>
-<script src="assets/js/pages/residencia.js" defer></script>
+<script src="assets/aquasense.js" defer></script>
 </head>
 <body>
 <div class="app " data-od-id="app"><div class="statusbar"><span>9:41</span><span class="sb-r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="15" height="11" viewBox="0 0 15 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M1 4a9 9 0 0 1 13 0"/><path d="M3.6 6.6a5.4 5.4 0 0 1 7.8 0"/><path d="M7.5 9.4h.01"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" aria-hidden="true"><rect x=".7" y=".7" width="19" height="9.6" rx="2.6" stroke="currentColor" stroke-opacity=".45"/><rect x="2.4" y="2.4" width="14" height="6.2" rx="1.4" fill="currentColor"/><path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5"/></svg></span></div><header class="appbar" data-od-id="appbar"><a class="iconbtn" href="inicio.html" aria-label="Voltar"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></a><h1>Minha residência</h1></header>
 <div class="scroll" data-od-id="residencia">
-  <p class="residencia-desc">
+  <p style="font-size:13.5px;color:var(--ink-2);margin:2px 2px 16px;line-height:1.5">
     Por onde a água entra, passa pelo sensor ESP32 e para onde vai. Toque em um ponto para ver a leitura ao vivo.</p>
 
   <section class="tree" data-od-id="mapa-residencia">
@@ -26,18 +24,18 @@
     <div class="vline"></div>
     <button class="nd off" data-p="saida" aria-pressed="false" type="button"><span class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 6-10 6-10z"/></svg></span><span class="nt"><b>Saída de água</b><small id="ndSaidaSub">conectando…</small></span><span class="nv" id="ndSaidaVal">-- L/min</span></button>
     <div class="legend">
-      <span><i class="leg-ok"></i>Normal</span>
-      <span><i class="leg-low"></i>Atenção</span>
-      <span><i class="leg-mid"></i>Fora do padrão</span>
-      <span><i class="leg-off"></i>Sem dados</span>
+      <span><i style="background:var(--ok)"></i>Normal</span>
+      <span><i style="background:var(--low)"></i>Atenção</span>
+      <span><i style="background:var(--mid)"></i>Fora do padrão</span>
+      <span><i style="background:var(--off)"></i>Sem dados</span>
     </div>
   </section>
 
-  <div class="card card-ponto-sel" id="sel" data-od-id="ponto-selecionado">
+  <div class="card" id="sel" style="margin-top:14px" data-od-id="ponto-selecionado">
     <span class="eyebrow" id="sel-eb">Selecione um ponto</span>
-    <p id="sel-txt" class="sel-ponto-txt">
+    <p id="sel-txt" style="margin:8px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.5">
       Toque em Entrada, ESP32 ou Saída para ver a leitura de cada trecho ao vivo.</p>
-    <a class="btn btn-outline btn-sm sel-ponto-cta" id="sel-cta" href="ponto-detalhe.html">Abrir detalhes do ponto</a>
+    <a class="btn btn-outline btn-sm" id="sel-cta" href="ponto-detalhe.html" style="width:100%;margin-top:14px;display:none">Abrir detalhes do ponto</a>
   </div>
 
   <div class="sec-head"><h2>Pontos monitorados</h2><a href="pontos.html">Ver lista</a></div>
@@ -45,7 +43,7 @@
     <a class="row" href="#"><span class="ic "><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-2.9-1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 3 15a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 10 4.1V4a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 2.9 1.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0 1.2 2.9H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span class="txt"><b>Configurar pontos</b><span>Renomear, agrupar por cômodo</span></span><span class="end"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></a> <a class="row" href="#"><span class="ic "><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span><span class="txt"><b>Adicionar novo ponto</b><span>Parear um sensor recém-instalado</span></span><span class="end"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></a>
   </div>
 
-  <div class="banner off banner-sem-leitura" id="bannerSemLeitura">
+  <div class="banner off" id="bannerSemLeitura" style="margin-top:14px;display:none">
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2l20 20"/><path d="M5 12.5a10 10 0 0 1 4-2.4"/><path d="M8.8 16.3a5 5 0 0 1 6.4 0"/><path d="M12 20h.01"/><path d="M15.5 10.6a10 10 0 0 1 3.5 1.9"/></svg><div><b>Trecho sem leitura</b><p id="bannerSemLeituraText">O sensor ESP32 não está enviando dados. A comparação entre entrada e saída fica pausada até a leitura voltar.</p></div>
   </div>
 </div>

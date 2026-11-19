@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 
 <head>
@@ -10,11 +10,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/pages/inicio.css">
+  <link rel="stylesheet" href="assets/aquasense.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.15.2/mqtt.min.js"></script>
-  <script src="assets/js/global.js" defer></script>
-  <script src="assets/js/pages/inicio.js" defer></script>
+  <script src="assets/aquasense.js" defer></script>
 </head>
 
 <body>
@@ -36,7 +34,7 @@
           <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
         </svg></span></div>
     <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-        alt="AQUASENSE"><span class="spacer"></span><a class="iconbtn has-badge" href="alertas.html"
+        alt="AQUASENSE"><span style="flex:1"></span><a class="iconbtn has-badge" href="alertas.html"
         aria-label="Alertas, 3 não lidos"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -58,7 +56,8 @@
             d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z M340,29 C396,7 452,51 510,29 C568,7 624,51 680,29 L680,58 L0,58 Z"
             fill="#fff" />
         </svg>
-        <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-ok" id="heroDot"></span><span id="heroPillText">Fluxo normal</span></span><span class="hero-time" id="heroTime">conectando…</span></div>
+        <div class="hero-top"><span class="pill-state"><span class="dot" id="heroDot"
+              style="background:#4ADE80"></span><span id="heroPillText">Fluxo normal</span></span><span class="hero-time" id="heroTime">conectando…</span></div>
         <h2 id="heroTitle">Tudo certo por aqui</h2>
         <p id="heroDesc">Nenhuma anormalidade identificada na sua residência.</p>
         <div class="hero-foot">
@@ -68,7 +67,7 @@
         </div>
       </section>
 
-      <div class="banner off banner-offline" id="bannerOffline" data-od-id="aviso-sensor-offline">
+      <div class="banner off" id="bannerOffline" style="margin-top:14px;display:none" data-od-id="aviso-sensor-offline">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M2 2l20 20" />
@@ -85,12 +84,18 @@
       <div class="sec-head">
         <h2>Status do sensor</h2>
       </div>
-      <div class="card status-summary" data-od-id="resumo-sensores">
-        <div class="status-summary-col"><b class="status-summary-num" id="resFuncionando">0</b><span class="status-summary-label">Funcionando</span></div>
-        <div class="status-summary-divider"></div>
-        <div class="status-summary-col"><b class="status-summary-num" id="resAtencao">0</b><span class="status-summary-label">Atenção</span></div>
-        <div class="status-summary-divider"></div>
-        <div class="status-summary-col"><b class="status-summary-num" id="resIndisponivel">0</b><span class="status-summary-label">Indisponível</span></div>
+      <div class="card" data-od-id="resumo-sensores" style="display:flex;gap:6px;align-items:stretch">
+        <div style="flex:1;text-align:center"><b id="resFuncionando"
+            style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--muted)">0</b><span
+            style="font-size:11px;color:var(--muted);font-weight:600">Funcionando</span></div>
+        <div style="width:1px;background:var(--border)"></div>
+        <div style="flex:1;text-align:center"><b id="resAtencao"
+            style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--muted)">0</b><span
+            style="font-size:11px;color:var(--muted);font-weight:600">Atenção</span></div>
+        <div style="width:1px;background:var(--border)"></div>
+        <div style="flex:1;text-align:center"><b id="resIndisponivel"
+            style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--muted)">0</b><span
+            style="font-size:11px;color:var(--muted);font-weight:600">Indisponível</span></div>
       </div>
 
       <div class="sec-head">
@@ -139,8 +144,8 @@
         <h2>Último evento</h2>
       </div>
       <div class="list" data-od-id="ultimo-evento" id="listaUltimoEvento">
-        <div class="empty empty-compact">
-          <p>Nenhum evento registrado nesta sessão.</p>
+        <div class="empty" style="padding:20px 8px">
+          <p style="margin:0;font-size:12.5px;color:var(--muted)">Nenhum evento registrado nesta sessão.</p>
         </div>
       </div>
     </div>

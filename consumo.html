@@ -10,10 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/pages/consumo.css">
-  <script src="assets/js/global.js" defer></script>
-  <script src="assets/js/pages/consumo.js" defer></script>
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
 </head>
 
 <body>
@@ -49,27 +47,27 @@
         <button data-p="m" aria-pressed="false">30 dias</button>
       </div>
 
-      <section class="card consumo-chart-card" data-od-id="grafico-consumo">
-        <div class="chart-header">
+      <section class="card" style="margin-top:14px" data-od-id="grafico-consumo">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
           <div><span class="eyebrow" id="c-label">Últimos 7 dias</span>
-            <div class="big chart-total-val" id="c-total">1.024<span class="u">L</span></div>
+            <div class="big" id="c-total" style="margin-top:4px">1.024<span class="u">L</span></div>
           </div>
           <span class="badge ok" id="c-cmp"><span class="dot"></span>8% abaixo</span>
         </div>
         <div class="bars" id="c-chart" role="img" aria-label="Gráfico de consumo do período">
-          <div class="b " style="height:55%"><i></i></div>
-          <div class="b " style="height:66%"><i></i></div>
-          <div class="b " style="height:61%"><i></i></div>
-          <div class="b mid" style="height:100%"><i></i></div>
-          <div class="b " style="height:59%"><i></i></div>
-          <div class="b low" style="height:74%"><i></i></div>
-          <div class="b " style="height:63%"><i></i></div>
+          <div class="b " style="height:55%"><i style="height:100%"></i></div>
+          <div class="b " style="height:66%"><i style="height:100%"></i></div>
+          <div class="b " style="height:61%"><i style="height:100%"></i></div>
+          <div class="b mid" style="height:100%"><i style="height:100%"></i></div>
+          <div class="b " style="height:59%"><i style="height:100%"></i></div>
+          <div class="b low" style="height:74%"><i style="height:100%"></i></div>
+          <div class="b " style="height:63%"><i style="height:100%"></i></div>
         </div>
         <div class="chart-x" id="c-chart-x">
           <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
         </div>
-        <p class="consumo-legend">
-          <span class="dot-indicador"></span>
+        <p style="margin:14px 0 0;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:6px">
+          <span style="width:9px;height:9px;border-radius:2px;background:var(--mid);display:inline-block"></span>
           dias com anormalidade identificada
         </p>
       </section>
@@ -80,11 +78,11 @@
       <div class="grid2">
         <div class="stat"><span>Consumo total</span><b id="k1">1.024<i>L</i></b></div>
         <div class="stat"><span>Maior consumo</span><b id="k2">214<i>L · Qua</i></b></div>
-        <div class="stat"><span>Possíveis vazamentos</span><b id="k3" class="val-destaque-mid">2</b></div>
-        <div class="stat"><span>Potencialmente desperdiçado</span><b id="k4" class="val-destaque-mid">31<i>L</i></b>
+        <div class="stat"><span>Possíveis vazamentos</span><b id="k3" style="color:var(--mid-ink)">2</b></div>
+        <div class="stat"><span>Potencialmente desperdiçado</span><b id="k4" style="color:var(--mid-ink)">31<i>L</i></b>
         </div>
       </div>
-      <p class="consumo-footer-note">
+      <p style="font-size:11.5px;color:var(--muted);margin:10px 2px 0;line-height:1.45">
         “Potencialmente desperdiçado” é uma estimativa a partir do fluxo fora do padrão — não é uma medição direta de
         perda.</p>
 

@@ -10,10 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/pages/planos.css">
-  <script src="assets/js/global.js" defer></script>
-  <script src="assets/js/pages/planos.js" defer></script>
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +37,7 @@
     </header>
     <div class="scroll" data-od-id="planos">
 
-      <p class="planos-intro">
+      <p style="font-size:13.5px;color:var(--ink-2);margin:2px 2px 18px;line-height:1.5">
         Assinar um plano libera o acesso completo ao aplicativo: o feedback em tempo real dos sensores (status do fluxo,
         alertas de vazamento, histórico), o mapa da residência e todos os outros recursos da plataforma.</p>
 
@@ -111,8 +109,8 @@
         <div class="sum total"><span>Total</span><b id="sumTotal">--</b></div>
       </div>
 
-      <button class="btn btn-primary btn-assinar" id="btnAssinar" type="button">Assinar plano</button>
-      <p class="planos-terms">Pagamento ilustrativo: nenhuma cobrança real é feita.<br>Você pode trocar de plano ou cancelar a qualquer momento.</p>
+      <button class="btn btn-primary" id="btnAssinar" type="button" style="margin-top:18px">Assinar plano</button>
+      <p style="text-align:center;font-size:11.5px;color:var(--muted);margin:10px 0 0;line-height:1.5">Pagamento ilustrativo: nenhuma cobrança real é feita.<br>Você pode trocar de plano ou cancelar a qualquer momento.</p>
     </div>
 
     <div class="dialog" id="dlgPlano" role="dialog" aria-modal="true" aria-labelledby="dlgPlano-t">
@@ -127,8 +125,9 @@
     </div>
 
     <div class="dialog" id="dlgOk" role="dialog" aria-modal="true" aria-labelledby="dlgOk-t">
-      <div class="box dlg-success-box">
-        <div class="dlg-success-icon">
+      <div class="box" style="text-align:center">
+        <div
+          style="width:52px;height:52px;border-radius:50%;background:var(--ok-bg);color:var(--ok-ink);display:grid;place-items:center;margin:0 auto 12px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M20 6 9 17l-5-5" />

@@ -10,9 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/pages/inicio-estados.css">
-  <script src="assets/js/global.js" defer></script>
+  <link rel="stylesheet" href="assets/aquasense.css">
+  <script src="assets/aquasense.js" defer></script>
 </head>
 
 <body class="gal">
@@ -43,7 +42,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -59,7 +58,7 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-ok"></span>Fluxo
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#4ADE80"></span>Fluxo
                   normal</span><span class="hero-time">há 4 min</span></div>
               <h2>Tudo certo por aqui</h2>
               <p>Nenhuma anormalidade identificada na sua residência.</p>
@@ -69,18 +68,18 @@
                 <div><span>Este mês</span><b>3.180 L</b></div>
               </div>
             </section><a class="card" href="#" data-od-id="resumo-sensores"
-              class="card estado-summary-link">
-              <div class="status-summary-col"><b
-                  class="status-summary-num text-ok">4</b><span
-                  class="status-summary-label">Funcionando</span></div>
-              <div class="status-summary-divider"></div>
-              <div class="status-summary-col"><b
-                  class="status-summary-num text-low">1</b><span
-                  class="status-summary-label">Atenção</span></div>
-              <div class="status-summary-divider"></div>
-              <div class="status-summary-col"><b
-                  class="status-summary-num text-off">1</b><span
-                  class="status-summary-label">Indisponível</span></div>
+              style="margin-top:14px;display:flex;gap:6px;text-decoration:none;color:inherit;align-items:stretch">
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--ok-ink)">4</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Funcionando</span></div>
+              <div style="width:1px;background:var(--border)"></div>
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--low-ink)">1</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Atenção</span></div>
+              <div style="width:1px;background:var(--border)"></div>
+              <div style="flex:1;text-align:center"><b
+                  style="font-family:var(--display);font-size:22px;font-weight:700;display:block;color:var(--off-ink)">1</b><span
+                  style="font-size:11px;color:var(--muted);font-weight:600">Indisponível</span></div>
             </a>
           </div>
           <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
@@ -140,7 +139,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -156,7 +155,8 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-low"></span>Possível vazamento leve</span><span class="hero-time">há 2
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FDE68A"></span>Possível vazamento leve</span><span class="hero-time">há 2
                   min</span></div>
               <h2>Fluxo um pouco acima do padrão</h2>
               <p>Identificamos 3,2 L na torneira externa.</p>
@@ -166,7 +166,7 @@
                 <div><span>Local</span><b>Externa</b></div>
               </div>
             </section>
-            <div class="guide mt-14"><span class="eyebrow"><svg width="14" height="14"
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
                   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                   stroke-linejoin="round" aria-hidden="true">
                   <path d="M9 18h6" />
@@ -232,7 +232,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -248,7 +248,8 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-mid"></span>Possível vazamento moderado</span><span class="hero-time">há 1
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FDBA74"></span>Possível vazamento moderado</span><span class="hero-time">há 1
                   min</span></div>
               <h2>Fluxo fora do padrão</h2>
               <p>Identificamos fluxo acima do padrão no banheiro.</p>
@@ -258,7 +259,7 @@
                 <div><span>Local</span><b>Banheiro</b></div>
               </div>
             </section>
-            <div class="guide mt-14"><span class="eyebrow"><svg width="14" height="14"
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
                   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                   stroke-linejoin="round" aria-hidden="true">
                   <path d="M9 18h6" />
@@ -324,7 +325,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -340,7 +341,8 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-high"></span>Possível vazamento crítico</span><span
+              <div class="hero-top"><span class="pill-state"><span class="dot"
+                    style="background:#FCA5A5"></span>Possível vazamento crítico</span><span
                   class="hero-time">agora</span></div>
               <h2>Verifique sua residência</h2>
               <p>Fluxo muito acima do padrão na área externa.</p>
@@ -350,7 +352,7 @@
                 <div><span>Local</span><b>Externa</b></div>
               </div>
             </section>
-            <div class="guide mt-14"><span class="eyebrow"><svg width="14" height="14"
+            <div class="guide" style="margin-top:14px"><span class="eyebrow"><svg width="14" height="14"
                   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                   stroke-linejoin="round" aria-hidden="true">
                   <path d="M9 18h6" />
@@ -416,7 +418,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -432,7 +434,7 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-off"></span>Leitura
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#CBD5E1"></span>Leitura
                   parcial</span><span class="hero-time">há 22 min</span></div>
               <h2>Não conseguimos avaliar tudo</h2>
               <p>2 de 6 sensores estão sem enviar dados.</p>
@@ -442,7 +444,7 @@
                 <div><span>Este mês</span><b>3.136 L</b></div>
               </div>
             </section>
-            <div class="banner off mt-14"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+            <div class="banner off" style="margin-top:14px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
                 aria-hidden="true">
                 <path d="M2 2l20 20" />
@@ -511,7 +513,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -523,7 +525,7 @@
                 <path d="M4 21a8 8 0 0 1 16 0" />
               </svg></span></header>
           <div class="scroll">
-            <div class="banner high mb-14"><svg width="19" height="19" viewBox="0 0 24 24"
+            <div class="banner high" style="margin-bottom:14px"><svg width="19" height="19" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
                 aria-hidden="true">
                 <path d="M2 2l20 20" />
@@ -540,7 +542,7 @@
                 preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,29 C56,7 112,51 170,29 C228,7 284,51 340,29 L340,58 L0,58 Z" fill="#fff" />
               </svg>
-              <div class="hero-top"><span class="pill-state"><span class="dot hero-dot-off"></span>Dados
+              <div class="hero-top"><span class="pill-state"><span class="dot" style="background:#CBD5E1"></span>Dados
                   desatualizados</span><span class="hero-time">11:40</span></div>
               <h2>Última leitura às 11:40</h2>
               <p>O app não conseguiu se conectar ao sistema.</p>
@@ -549,7 +551,7 @@
                 <div><span>Hoje</span><b>98 L</b></div>
                 <div><span>Este mês</span><b>3.136 L</b></div>
               </div>
-            </section><button class="btn btn-outline mt-14">Tentar novamente</button>
+            </section><button class="btn btn-outline" style="margin-top:14px">Tentar novamente</button>
           </div>
           <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
               aria-current="page" data-od-id="tab-home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"
@@ -606,7 +608,7 @@
                 <path d="M21.5 4v3a2 2 0 0 0 0-3z" fill="currentColor" fill-opacity=".5" />
               </svg></span></div>
           <header class="appbar" data-od-id="appbar"><img class="brand" src="img/VARIAC_A_O-3---AQUASENSE.png"
-              alt="AQUASENSE"><span class="spacer"></span><span class="iconbtn"><svg width="21" height="21"
+              alt="AQUASENSE"><span style="flex:1"></span><span class="iconbtn"><svg width="21" height="21"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 8a6 6 0 1 0-12 0c0 6-3 8-3 8h18s-3-2-3-8" />
@@ -618,32 +620,32 @@
                 <path d="M4 21a8 8 0 0 1 16 0" />
               </svg></span></header>
           <div class="scroll">
-            <div class="sk" class="sk sk-hero"></div>
-            <div class="sk" class="sk sk-bar"></div>
-            <div class="sk" class="sk sk-title"></div>
-            <div class="sk-row">
-              <div class="sk" class="sk sk-icon"></div>
-              <div class="spacer">
-                <div class="sk" class="sk sk-line-58"></div>
-                <div class="sk" class="sk sk-line-38"></div>
+            <div class="sk" style="height:186px;border-radius:20px"></div>
+            <div class="sk" style="height:64px;border-radius:12px;margin-top:14px"></div>
+            <div class="sk" style="height:13px;width:44%;margin:26px 0 14px"></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:58%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:38%"></div>
               </div>
-              <div class="sk" class="sk sk-badge"></div>
+              <div class="sk" style="width:44px;height:12px"></div>
             </div>
-            <div class="sk-row">
-              <div class="sk" class="sk sk-icon"></div>
-              <div class="spacer">
-                <div class="sk" class="sk sk-line-46"></div>
-                <div class="sk" class="sk sk-line-44"></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:46%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:44%"></div>
               </div>
-              <div class="sk" class="sk sk-badge"></div>
+              <div class="sk" style="width:44px;height:12px"></div>
             </div>
-            <div class="sk-row">
-              <div class="sk" class="sk sk-icon"></div>
-              <div class="spacer">
-                <div class="sk" class="sk sk-line-64"></div>
-                <div class="sk" class="sk sk-line-34"></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px 0">
+              <div class="sk" style="width:40px;height:40px;border-radius:12px;flex:none"></div>
+              <div style="flex:1">
+                <div class="sk" style="height:11px;width:64%;margin-bottom:7px"></div>
+                <div class="sk" style="height:10px;width:34%"></div>
               </div>
-              <div class="sk" class="sk sk-badge"></div>
+              <div class="sk" style="width:44px;height:12px"></div>
             </div>
           </div>
           <nav class="tabbar" data-od-id="tabbar" aria-label="Navegação principal"><a href="inicio.html"
