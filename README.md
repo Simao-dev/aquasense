@@ -1,17 +1,21 @@
-💧 AquaSense — Monitoramento Hídrico Inteligente e Detecção de Anomalias (IoT)
+# 💧 AquaSense — Monitoramento Hídrico Inteligente e Detecção de Anomalias (IoT)
 
-O AquaSense é uma solução de Internet das Coisas (IoT) de baixo custo desenvolvida no âmbito da disciplina de Projeto Integrador: Cidades Inteligentes e IoT (Cursos de Sistemas de Informação / Análise e Desenvolvimento de Sistemas). O projeto visa monitorar o consumo residencial de água em tempo real, identificar vazamentos ocultos por meio de balanço hídrico e promover o uso consciente da água.
+O **AquaSense** é uma solução de Internet das Coisas (IoT) de baixo custo desenvolvida no âmbito da disciplina de **Projeto Integrador: Cidades Inteligentes e IoT** (Cursos de Sistemas de Informação / Análise e Desenvolvimento de Sistemas). O projeto visa monitorar o consumo residencial de água em tempo real, identificar vazamentos ocultos por meio de balanço hídrico e promover o uso consciente da água.
 
-🎯 Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS)
+---
 
-ODS 6 (Água Potável e Saneamento): Aumentar a eficiência no uso da água, reduzir perdas hídricas e evitar danos estruturais por vazamentos.
+## 🎯 Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS)
 
-ODS 12 (Consumo e Produção Responsáveis): Promover a conscientização sobre o consumo sustentável de recursos naturais através da visibilidade de dados em tempo real.
+* **ODS 6 (Água Potável e Saneamento):** Aumentar a eficiência no uso da água, reduzir perdas hídricas e evitar danos estruturais por vazamentos.
+* **ODS 12 (Consumo e Produção Responsáveis):** Promover a conscientização sobre o consumo sustentável de recursos naturais através da visibilidade de dados em tempo real.
 
-⚙️ Arquitetura Física e Funcionamento do Protótipo
+---
 
-O protótipo físico opera com base no princípio de balanço hídrico diferencial (comparação entre o volume de água que entra e o volume que sai de um trecho da tubulação):
+## ⚙️ Arquitetura Física e Funcionamento do Protótipo
 
+O protótipo físico opera com base no princípio de **balanço hídrico diferencial** (comparação entre o volume de água que entra e o volume que sai de um trecho da tubulação):
+
+```text
 [Sensores de Fluxo (Entrada / Saída)] 
         │
         ▼ (Cabos Ethernet)
@@ -22,26 +26,24 @@ O protótipo físico opera com base no princípio de balanço hídrico diferenci
         │
         ▼ (Conexão Serial / USB)
 [Computador / Aplicação Web AquaSense]
+```
 
+### Como funciona a lógica de detecção:
 
-Como funciona a lógica de detecção:
+1. **Conexão Central (Microcontrolador):** O **Arduino** é conectado diretamente ao computador (via cabo USB/Serial) para alimentação e transmissão de dados de telemetria para a aplicação.
+2. **Infraestrutura Cabeada (Keystones & Ethernet):** Os sensores de fluxo de água são conectados utilizando **cabos Ethernet**, que se encaixam em módulos **Keystone (RJ45)** interligados às portas de leitura do Arduino. Essa abordagem garante modularidade, organização e facilidade de manutenção física.
+3. **Regra de Divergência:**
+   * **Sensor de Entrada:** Mede o fluxo principal de água que abastece o sistema/residência.
+   * **Sensor de Saída:** Mede o fluxo nos pontos de consumo/saída.
+   * **Detecção de Anomalia:** Caso o fluxo de **saída seja menor que o de entrada** (considerando a margem de tolerância de calibração), o sistema identifica uma **divergência hídrica** (perda no percurso), caracterizando um possível vazamento ou anomalia, e dispara um alerta imediato no aplicativo **AquaSense**.
 
-Conexão Central (Microcontrolador): O Arduino é conectado diretamente ao computador (via cabo USB/Serial) para alimentação e transmissão de dados de telemetria para a aplicação.
+---
 
-Infraestrutura Cabeada (Keystones & Ethernet): Os sensores de fluxo de água são conectados utilizando cabos Ethernet, que se encaixam em módulos Keystone (RJ45) interligados às portas de leitura do Arduino. Essa abordagem garante modularidade, organização e facilidade de manutenção física.
+## 📂 Estrutura do Repositório
 
-Regra de Divergência:
+A interface web do aplicativo foi desenvolvida em **HTML5, CSS3 e JavaScript puro**, estruturada nas seguintes telas e módulos:
 
-Sensor de Entrada: Mede o fluxo principal de água que abastece o sistema/residência.
-
-Sensor de Saída: Mede o fluxo nos pontos de consumo/saída.
-
-Detecção de Anomalia: Caso o fluxo de saída seja menor que o de entrada (considerando a margem de tolerância de calibração), o sistema identifica uma divergência hídrica (perda no percurso), caracterizando um possível vazamento ou anomalia, e dispara um alerta imediato no aplicativo AquaSense.
-
-📂 Estrutura do Repositório
-
-A interface web do aplicativo foi desenvolvida em HTML5, CSS3 e JavaScript puro, estruturada nas seguintes telas e módulos:
-
+```text
 AQUASENSE/
 ├── assets/
 │   ├── aquasense.css          # Folha de estilos global e componentes visuais
@@ -70,39 +72,39 @@ AQUASENSE/
 ├── DESIGN-MANIFEST.json       # Manifesto de tokens e ativos visuais
 ├── LICENSE                    # Licença do projeto
 └── README.md                  # Documentação principal do repositório
+```
 
+---
 
-🚀 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
-1. Hardware (Protótipo Físico)
+### 1. Hardware (Protótipo Físico)
 
-Conecte os cabos Ethernet dos Sensores de Entrada e Saída nos respectivos módulos Keystone ligados ao Arduino.
+1. Conecte os cabos Ethernet dos **Sensores de Entrada e Saída** nos respectivos módulos **Keystone** ligados ao Arduino.
+2. Conecte o **Arduino** a uma porta USB do computador.
+3. Certifique-se de que o firmware de leitura dos pulsos de fluxo esteja carregado na placa e transmitindo os dados pela porta Serial.
 
-Conecte o Arduino a uma porta USB do computador.
-
-Certifique-se de que o firmware de leitura dos pulsos de fluxo esteja carregado na placa e transmitindo os dados pela porta Serial.
-
-2. Aplicação Web (Dashboard AquaSense)
+### 2. Aplicação Web (Dashboard AquaSense)
 
 Como o front-end é construído com tecnologias web nativas (HTML/CSS/JS), não há necessidade de instalação de dependências pesadas:
 
-Clone este repositório:
+1. Clone este repositório:
+   ```bash
+   git clone <url-do-seu-repositorio>
+   ```
+2. Acesse a pasta `AQUASENSE` e abra o arquivo `index.html` ou `inicio.html` diretamente no navegador (ou utilize uma extensão como o *Live Server* no VS Code para melhor experiência).
 
-git clone <url-do-seu-repositorio>
+---
 
+## 🛠️ Tecnologias Utilizadas
 
-Acesse a pasta AQUASENSE e abra o arquivo index.html ou inicio.html diretamente no navegador (ou utilize uma extensão como o Live Server no VS Code para melhor experiência).
+* **Hardware & IoT:** Arduino, Sensores de Fluxo de Água, Conectores Keystone RJ45, Cabos Ethernet.
+* **Front-end:** HTML5, CSS3, JavaScript.
+* **Design & Prototipação:** Figma, Design System próprio.
+* **Gestão Ágil:** Metodologia Scrum (Product Backlog, Sprints, Dailies e Kanban).
 
-🛠️ Tecnologias Utilizadas
+---
 
-Hardware & IoT: Arduino, Sensores de Fluxo de Água, Conectores Keystone RJ45, Cabos Ethernet.
+## 📄 Licença
 
-Front-end: HTML5, CSS3, JavaScript.
-
-Design & Prototipação: Figma, Design System próprio.
-
-Gestão Ágil: Metodologia Scrum (Product Backlog, Sprints, Dailies e Kanban).
-
-📄 Licença
-
-Consulte o arquivo LICENSE para mais detalhes sobre os termos de uso deste projeto.
+Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes sobre os termos de uso deste projeto.
